@@ -1,0 +1,17 @@
+[
+    {
+      "userId": 1,
+      "loanAmount": 3000,
+      "loanBalance": 2800,
+      "loanDate": "2023-06-01",
+      "interestRate": 3.5
+    },
+    {
+      "userId": 2,
+      "loanAmount": 5000,
+      "loanBalance": 4800,
+      "loanDate": "2023-05-01",
+      "interestRate": 2.8
+    }
+  ]
+  

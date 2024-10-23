@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    display: block;
+    width: 100%;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.balance-section, .loan-section {
+    margin: 20px 0;
+}

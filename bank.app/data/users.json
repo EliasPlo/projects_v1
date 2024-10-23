@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Matti Meikäläinen",
+      "username": "matti",
+      "password": "salasana"
+    },
+    {
+      "id": 2,
+      "name": "Maija Meikäläinen",
+      "username": "maija",
+      "password": "salainen"
+    }
+  ]
+  

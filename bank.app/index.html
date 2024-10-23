@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankkisivu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Kirjaudu sisään</h2>
+        <input type="text" id="username" placeholder="Käyttäjänimi">
+        <input type="password" id="password" placeholder="Salasana">
+        <button onclick="login()">Kirjaudu</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <h2>Tervetuloa, <span id="user-name"></span></h2>
+        <div class="balance-section">
+            <h3>Tilisi saldo: <span id="account-balance"></span> €</h3>
+            <button onclick="deposit()">Talleta</button>
+            <button onclick="withdraw()">Nosta</button>
+        </div>
+        <div class="loan-section">
+            <h3>Lainasi:</h3>
+            <div id="loan-info"></div>
+            <button onclick="takeLoan()">Ota lainaa</button>
+        </div>
+        <div>
+            <button onclick="logout()">Kirjaudu ulos</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

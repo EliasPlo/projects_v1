@@ -1,0 +1,35 @@
+[
+    {
+      "userId": 1,
+      "balance": 5000,
+      "transactions": [
+        {
+          "type": "deposit",
+          "amount": 1000,
+          "date": "2024-01-01"
+        },
+        {
+          "type": "withdraw",
+          "amount": 200,
+          "date": "2024-02-15"
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "balance": 10000,
+      "transactions": [
+        {
+          "type": "deposit",
+          "amount": 5000,
+          "date": "2024-01-01"
+        },
+        {
+          "type": "withdraw",
+          "amount": 300,
+          "date": "2024-02-15"
+        }
+      ]
+    }
+  ]
+  
