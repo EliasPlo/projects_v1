@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikkeli - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="articleTitle">Artikkelin Otsikko</h1>
+</header>
+
+<main>
+    <div id="articleContentContainer">
+        <p id="articleContent">Artikkelin sisältö latautuu...</p>
+    </div>
+    <button id="editButton">Etusivu</button>
+</main>
+<footer>ECDF-ware Oy &copy;2024</footer>
+<script>
+// Hae artikkelin id URL-parametreistä
+const urlParams = new URLSearchParams(window.location.search);
+const articleId = urlParams.get('id');
+
+// Lataa artikkeli JSON-tiedostosta
+fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        const article = data.articles.find(a => a.id == articleId);
+        if (article) {
+            document.getElementById('articleTitle').textContent = article.title;
+            document.getElementById('articleContent').textContent = article.content;
+        } else {
+            document.getElementById('message').textContent = 'Artikkelia ei löytynyt.';
+        }
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelia.';
+    });
+
+// Muokkausnappulan toiminnallisuus
+document.getElementById('editButton').addEventListener('click', function() {
+    window.location.href = `index.html`;
+});
+
+/*/ Takaisin-painike
+document.getElementById('backButton').addEventListener('click', function() {
+    window.history.back();
+});*/
+
+fetch(`http://localhost:3000/api/articles/${articleId}`)
+    .then(response => {
+        if (!response.ok) throw new Error('Artikkelia ei löytynyt.');
+        return response.json();
+    })
+    .then(article => {
+        document.getElementById('articleTitle').textContent = article.title;
+        document.getElementById('articleContent').textContent = article.content;
+        document.getElementById('editLink').href += articleId; 
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        console.error('Virhe ladattaessa artikkelia:', error);
+        document.getElementById('message').textContent = error.message;
+    });
+
+</script>
+
+</body>
+</html>

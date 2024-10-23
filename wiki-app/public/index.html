@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Artikkeli Lista</h1>
+    <input type="text" id="searchInput" placeholder="Hae artikkeleita...">
+    <button id="searchBtn">Hae</button>
+</header>
+
+<main>
+    <div id="content"></div>
+    <div id="pagination"></div>
+    <div id="message"></div>
+</main>
+
+<footer>ECDF-ware Oy &copy;2024 <a href="http://localhost:3000/admin.html"> localhost</a></footer>
+
+<script>
+// JavaScript-koodi artikkelilistan näyttämiseen
+document.addEventListener('DOMContentLoaded', () => {
+    let articlesData = [];
+    const articlesPerPage = 20;
+    let currentPage = 1;
+    const maxPages = 5; 
+
+    // Ladataan JSON-data tiedostosta
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            articlesData = data.articles;
+            displayArticles(articlesData, currentPage);
+
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.getElementById('searchInput');
+
+            // Haku napin toiminnallisuus
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredArticles = articlesData.filter(article => 
+                    article.title.toLowerCase().includes(searchTerm) ||
+                    article.content.toLowerCase().includes(searchTerm)
+                );
+                currentPage = 1;  // Nollataan sivu
+                displayArticles(filteredArticles, currentPage);
+            });
+        })
+        .catch(error => {
+            console.error('Virhe ladattaessa JSON-tietoja:', error);
+            document.getElementById('message').textContent = 'Virhe ladattaessa artikkelitiedot.';
+        });
+
+    // Funktio artikkelien näyttämiseksi sivun mukaan
+    function displayArticles(articles, page) {
+        const contentDiv = document.getElementById('content');
+        const paginationDiv = document.getElementById('pagination');
+        contentDiv.innerHTML = ''; // Tyhjennetään vanhat tulokset
+
+        const totalPages = Math.ceil(articles.length / articlesPerPage);
+        const startIndex = (page - 1) * articlesPerPage;
+        const endIndex = page * articlesPerPage;
+        const articlesToShow = articles.slice(startIndex, endIndex);
+
+        // Näytetään artikkelit
+        if (articlesToShow.length === 0) {
+            contentDiv.innerHTML = '<p>Ei tuloksia haullesi.</p>';
+            return;
+        }
+
+        articlesToShow.forEach(article => {
+            const articleElement = document.createElement('div');
+            articleElement.classList.add('article');
+
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = article.title;
+
+            const contentElement = document.createElement('p');
+            contentElement.textContent = article.content.substring(0, 100) + '...'; // Lyhennetään sisältö
+
+            const linkElement = document.createElement('a');
+            linkElement.href = `data.html?id=${article.id}`;
+            linkElement.textContent = 'Lue lisää';
+
+            articleElement.appendChild(titleElement);
+            articleElement.appendChild(contentElement);
+            articleElement.appendChild(linkElement);
+            contentDiv.appendChild(articleElement);
+        });
+
+        // Sivutuksen luonti
+        paginationDiv.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('button');
+            pageLink.textContent = i;
+            if (i === page) {
+                pageLink.classList.add('active');
+            }
+            pageLink.addEventListener('click', () => {
+                currentPage = i;
+                displayArticles(articles, currentPage);
+            });
+            paginationDiv.appendChild(pageLink);
+        }
+    }
+    function setupPagination(totalPages) {
+    const paginationDiv = document.getElementById('pagination');
+    paginationDiv.innerHTML = '';
+
+    for (let i = 1; i <= Math.min(totalPages, maxPages); i++) {
+        const pageLink = document.createElement('button');
+        pageLink.innerText = i;
+        pageLink.onclick = () => displayArticles(i);
+        paginationDiv.appendChild(pageLink);
+    }
+}
+
+    // Ladataan JSON-data palvelimelta
+fetch('http://localhost:3000/api/articles')
+    .then(response => response.json())
+    .then(data => {
+        articlesData = data.articles;
+        displayArticles(articlesData, currentPage);
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelitiedot.';
+    });
+
+});
+</script>
+
+</body>
+</html>

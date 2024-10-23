@@ -1,0 +1,315 @@
+/* Perusasetukset */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Artikkelin lista */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.article {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 0;
+}
+
+.article h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.article p {
+    margin: 5px 0;
+}
+
+.article a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+/* Hakukenttä */
+input[type="text"] {
+    width: 25%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+/* Nappulat */
+#searchBtn {
+    background-color: #526c7c;
+    color: #ffffff;
+    /*border: 2px 2px 2px 2px;*/
+    border-color: #526c7c;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #45a049;
+}
+
+#editButton {
+    background-color: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: left;
+}
+
+#editButton:hover {
+    background-color: #45a049;
+}
+
+/* Sivutus */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    margin: 0 5px;
+}
+
+#pagination .active {
+    background-color: #45a049;
+}
+
+/* Muokkausformi */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form button {
+    width: 100%;
+}
+
+/* Viestit */
+#message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Footer-tyyli */
+footer {
+    background-color: #333; /* Taustaväri (tumma harmaa) */
+    color: white; /* Tekstin väri */
+    text-align: center; /* Keskittää tekstin */
+    padding: 20px 0; /* Ylä- ja alatyhjennys (padding) */
+    font-family: 'Arial', sans-serif; /* Fontti */
+    font-size: 14px; /* Tekstin koko */
+    position: fixed; /* Pidä footer paikallaan sivun alaosassa */
+    width: 100%; /* Varmistaa, että footer täyttää koko sivun leveyden */
+    bottom: 0; /* Aseta footer sivun alareunaan */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Kevyt varjo footerille */
+}
+
+/* Linkkien tyylit footerissa */
+footer a {
+    color: #ff9900; /* Linkkien väri (esim. oranssi) */
+    text-decoration: none; /* Poistaa alleviivauksen */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Lisää alleviivauksen hover-tilassa */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    footer {
+        font-size: 12px; /* Pienempi fontti pienemmille näytöille */
+        padding: 15px 0;
+    }
+}
+
+/* Admin-sivun muotoilu */
+#addArticleForm, #articleList {
+    margin: 20px 0;
+}
+
+#addArticleForm label, #addArticleForm input, #addArticleForm textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#addArticleForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#addArticleForm button:hover {
+    background-color: #45a049;
+}
+
+.article-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-item button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.article-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* Yleinen sivun tyyli */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keskitetään kirjautumislomake sivulle */
+#loginSection {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Lomake kentät */
+#loginForm label {
+    text-align: left;
+    font-size: 14px;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Kirjautumispainike */
+#loginBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#loginBtn:hover {
+    background-color: #45a049;
+}
+
+/* Virheviestin tyyli */
+#loginMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Admin-sivun pääosio piilotettuna alussa */
+#adminSection {
+    display: none;
+    margin: 20px;
+}
+
+/* Artikkelin hallinta lomake ja artikkelien listaus */
+#addArticleForm, #articleList {
+    margin: 20px 0;
+}
+
+#addArticleForm input, #addArticleForm textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addArticleForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#addArticleForm button:hover {
+    background-color: #45a049;
+}
+
+
+

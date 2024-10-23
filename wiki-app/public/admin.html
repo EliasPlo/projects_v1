@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hallinta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <h1>Hallinta</h1>
+    
+</header>
+
+<main>
+    <!-- Kirjautumislomake -->
+    <section id="loginSection">
+        <h2>Kirjaudu sisään</h2>
+        <form id="loginForm">
+            <label for="username">Käyttäjätunnus:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" id="loginBtn">Kirjaudu</button>
+        </form>
+        <div id="loginMessage"></div>
+    </section>
+
+    <!-- Admin-toiminnot, jotka näkyvät vain kirjautumisen jälkeen -->
+    <section id="adminSection" style="display: none;">
+        <a href="http://localhost:3000/data.edit.html">edit.html</a>
+        <a href="http://localhost:3000/">Index</a>
+        <!-- Lomake uuden artikkelin lisäämiseen -->
+        <h2>Lisää uusi artikkeli</h2>
+        <form id="addArticleForm">
+            <label for="newTitle">Otsikko:</label>
+            <input type="text" id="newTitle" required>
+
+            <label for="newContent">Sisältö:</label>
+            <textarea id="newContent" required></textarea>
+
+            <button type="button" id="addArticleBtn">Lisää artikkeli</button>
+        </form>
+        <div id="addMessage"></div>
+
+        <!-- Lista kaikista artikkeleista -->
+        <h2>Artikkelit</h2>
+        <div id="articleList"></div>
+        <div id="editMessage"></div>
+    </section>
+</main>
+
+<script>
+    // Kirjautumistiedot (voit vaihtaa nämä tiedot)
+    const adminCredentials = {
+        username: 'admin', // Admin-käyttäjätunnus
+        password: 'pass' // Admin-salasana
+    };
+
+    // Tarkistaa kirjautumistiedot
+    document.getElementById('loginBtn').addEventListener('click', function() {
+        const enteredUsername = document.getElementById('username').value;
+        const enteredPassword = document.getElementById('password').value;
+
+        if (enteredUsername === adminCredentials.username && enteredPassword === adminCredentials.password) {
+            document.getElementById('loginSection').style.display = 'none'; // Piilotetaan kirjautumislomake
+            document.getElementById('adminSection').style.display = 'block'; // Näytetään admin-sisältö
+        } else {
+            document.getElementById('loginMessage').textContent = 'Virheellinen käyttäjätunnus tai salasana.';
+        }
+    });
+
+    // Lataa ja näytä kaikki artikkelit (vain admin-käyttäjänä)
+    function loadArticles() {
+        fetch('http://localhost:3000/api/articles')
+            .then(response => response.json())
+            .then(data => {
+                const articleList = document.getElementById('articleList');
+                articleList.innerHTML = ''; // Tyhjennetään lista ennen päivitystä
+
+                data.articles.forEach(article => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.className = 'article-item';
+                    articleDiv.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.content.substring(0, 100)}...</p>
+                        <button onclick="editArticle(${article.id})">Muokkaa</button>
+                        <button onclick="deleteArticle(${article.id})">Poista</button>
+                    `;
+                    articleList.appendChild(articleDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Virhe ladattaessa artikkeleita:', error);
+            });
+    }
+
+    // Lisää uusi artikkeli
+    document.getElementById('addArticleBtn').addEventListener('click', function() {
+        const newTitle = document.getElementById('newTitle').value;
+        const newContent = document.getElementById('newContent').value;
+
+        const newArticle = {
+            title: newTitle,
+            content: newContent
+        };
+
+        fetch('http://localhost:3000/api/articles', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newArticle)
+        })
+        .then(response => response.text())
+        .then(message => {
+            document.getElementById('addMessage').textContent = message;
+            loadArticles(); // Päivitä artikkelit
+        })
+        .catch(error => {
+            console.error('Virhe artikkelin lisäämisessä:', error);
+            document.getElementById('addMessage').textContent = 'Virhe artikkelin lisäämisessä.';
+        });
+    });
+
+    // Muokkaa artikkelia
+    function editArticle(id) {
+        const newTitle = prompt('Syötä uusi otsikko:');
+        const newContent = prompt('Syötä uusi sisältö:');
+
+        if (newTitle && newContent) {
+            const updatedArticle = {
+                title: newTitle,
+                content: newContent
+            };
+
+            fetch(`http://localhost:3000/api/articles/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedArticle)
+            })
+            .then(response => response.text())
+            .then(message => {
+                document.getElementById('editMessage').textContent = message;
+                loadArticles(); // Päivitä artikkelit
+            })
+            .catch(error => {
+                console.error('Virhe artikkelin muokkaamisessa:', error);
+                document.getElementById('editMessage').textContent = 'Virhe artikkelin muokkaamisessa.';
+            });
+        }
+    }
+
+    // Poista artikkeli
+    function deleteArticle(id) {
+        if (confirm('Haluatko varmasti poistaa tämän artikkelin?')) {
+            fetch(`http://localhost:3000/api/articles/${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.text())
+            .then(message => {
+                document.getElementById('editMessage').textContent = message;
+                loadArticles(); // Päivitä artikkelit
+            })
+            .catch(error => {
+                console.error('Virhe artikkelin poistamisessa:', error);
+                document.getElementById('editMessage').textContent = 'Virhe artikkelin poistamisessa.';
+            });
+        }
+    }
+
+    // Artikkelit ladataan, kun kirjautuminen onnistuu (kutsutaan loginin jälkeen)
+</script>
+
+</body>
+</html>

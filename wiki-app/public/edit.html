@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muokkaa Artikkelia - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Muokkaa Artikkelia</h1>
+</header>
+
+<main>
+    <div id="editFormContainer">
+        <form id="editForm">
+            <input type="hidden" id="articleId">
+            <label for="articleTitle">Otsikko:</label>
+            <input type="text" id="articleTitle" required>
+            <label for="articleContent">Sisältö:</label>
+            <textarea id="articleContent" required></textarea>
+            <button type="submit">Tallenna muutokset</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</main>
+<footer>ECDF-ware Oy &copy;2024</footer>
+
+<script>
+// Muutetaan tämä funktio JSON-tiedostosta saatujen tietojen perusteella
+const urlParams = new URLSearchParams(window.location.search);
+const articleId = urlParams.get('id');
+
+// Lataa artikkeli JSON-tiedostosta
+fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        const article = data.articles.find(a => a.id == articleId);
+        if (article) {
+            document.getElementById('articleId').value = article.id;
+            document.getElementById('articleTitle').value = article.title;
+            document.getElementById('articleContent').value = article.content;
+        } else {
+            document.getElementById('message').textContent = 'Artikkelia ei löytynyt.';
+        }
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelia.';
+    });
+
+// Lomakkeen lähettäminen
+document.getElementById('editForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const updatedArticle = {
+        id: parseInt(document.getElementById('articleId').value),
+        title: document.getElementById('articleTitle').value,
+        content: document.getElementById('articleContent').value
+    };
+
+    // Tässä kohdassa voisi olla palvelinpuolen koodi tiedoston tallentamiseen
+    // Esimerkiksi AJAX-pyyntö serverille, joka tallentaa tiedot JSON-tiedostoon
+    console.log('Tallennettavat tiedot:', updatedArticle);
+
+    // Tämä on vain esimerkki ja se ei oikeasti tallenna tiedostoja.
+    document.getElementById('message').textContent = 'Muutokset tallennettu! (ei oikeasti, lisää palvelinpuolen tuki)';
+});
+
+// Muokkaa artikkeli
+document.getElementById('saveButton').addEventListener('click', function() {
+    const updatedArticle = {
+        title: document.getElementById('articleTitle').value,
+        content: document.getElementById('articleContent').value
+    };
+
+    fetch(`http://localhost:3000/api/articles/${articleId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedArticle)
+    })
+    .then(response => response.text())
+    .then(message => {
+        document.getElementById('message').textContent = message;
+    })
+    .catch(error => {
+        console.error('Virhe päivittäessä artikkelia:', error);
+        document.getElementById('message').textContent = 'Virhe päivittäessä artikkelia.';
+    });
+});
+
+</script>
+
+</body>
+</html>
