@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Panel</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+
+        <!-- Link to admin page, initially hidden -->
+        <p id="admin-link" style="display: none;">
+            Login successful! Go to <br>
+            <a href="admin.html">ADDe</a><br>
+            <a href="info.html">INFO</a>
+        </p>
+    </div>
+
+    <script src="panel.js"></script>
+</body>
+</html>

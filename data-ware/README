@@ -1,0 +1,690 @@
+/public/index.html
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Artikkeli Lista</h1>
+    <input type="text" id="searchInput" placeholder="Hae artikkeleita...">
+    <button id="searchBtn">Hae</button>
+</header>
+
+<main>
+    <div id="content"></div>
+    <div id="pagination"></div>
+    <div id="message"></div>
+</main>
+
+<footer>ECDF-ware Oy &copy;2024 <a href="http://localhost:3000/admin.html"> localhost</a></footer>
+
+<script>
+// JavaScript-koodi artikkelilistan näyttämiseen
+document.addEventListener('DOMContentLoaded', () => {
+    let articlesData = [];
+    const articlesPerPage = 20;
+    let currentPage = 1;
+    const maxPages = 5; 
+
+    // Ladataan JSON-data tiedostosta
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            articlesData = data.articles;
+            displayArticles(articlesData, currentPage);
+
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.getElementById('searchInput');
+
+            // Haku napin toiminnallisuus
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredArticles = articlesData.filter(article => 
+                    article.title.toLowerCase().includes(searchTerm) ||
+                    article.content.toLowerCase().includes(searchTerm)
+                );
+                currentPage = 1;  // Nollataan sivu
+                displayArticles(filteredArticles, currentPage);
+            });
+        })
+        .catch(error => {
+            console.error('Virhe ladattaessa JSON-tietoja:', error);
+            document.getElementById('message').textContent = 'Virhe ladattaessa artikkelitiedot.';
+        });
+
+    // Funktio artikkelien näyttämiseksi sivun mukaan
+    function displayArticles(articles, page) {
+        const contentDiv = document.getElementById('content');
+        const paginationDiv = document.getElementById('pagination');
+        contentDiv.innerHTML = ''; // Tyhjennetään vanhat tulokset
+
+        const totalPages = Math.ceil(articles.length / articlesPerPage);
+        const startIndex = (page - 1) * articlesPerPage;
+        const endIndex = page * articlesPerPage;
+        const articlesToShow = articles.slice(startIndex, endIndex);
+
+        // Näytetään artikkelit
+        if (articlesToShow.length === 0) {
+            contentDiv.innerHTML = '<p>Ei tuloksia haullesi.</p>';
+            return;
+        }
+
+        articlesToShow.forEach(article => {
+            const articleElement = document.createElement('div');
+            articleElement.classList.add('article');
+
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = article.title;
+
+            const contentElement = document.createElement('p');
+            contentElement.textContent = article.content.substring(0, 100) + '...'; // Lyhennetään sisältö
+
+            const linkElement = document.createElement('a');
+            linkElement.href = `data.html?id=${article.id}`;
+            linkElement.textContent = 'Lue lisää';
+
+            articleElement.appendChild(titleElement);
+            articleElement.appendChild(contentElement);
+            articleElement.appendChild(linkElement);
+            contentDiv.appendChild(articleElement);
+        });
+
+        // Sivutuksen luonti
+        paginationDiv.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('button');
+            pageLink.textContent = i;
+            if (i === page) {
+                pageLink.classList.add('active');
+            }
+            pageLink.addEventListener('click', () => {
+                currentPage = i;
+                displayArticles(articles, currentPage);
+            });
+            paginationDiv.appendChild(pageLink);
+        }
+    }
+    function setupPagination(totalPages) {
+    const paginationDiv = document.getElementById('pagination');
+    paginationDiv.innerHTML = '';
+
+    for (let i = 1; i <= Math.min(totalPages, maxPages); i++) {
+        const pageLink = document.createElement('button');
+        pageLink.innerText = i;
+        pageLink.onclick = () => displayArticles(i);
+        paginationDiv.appendChild(pageLink);
+    }
+}
+
+    // Ladataan JSON-data palvelimelta
+fetch('http://localhost:3000/api/articles')
+    .then(response => response.json())
+    .then(data => {
+        articlesData = data.articles;
+        displayArticles(articlesData, currentPage);
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelitiedot.';
+    });
+
+});
+</script>
+
+</body>
+</html>
+
+
+/public/data.html
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikkeli - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="articleTitle">Artikkelin Otsikko</h1>
+</header>
+
+<main>
+    <div id="articleContentContainer">
+        <p id="articleContent">Artikkelin sisältö latautuu...</p>
+    </div>
+    <button id="editButton">Etusivu</button>
+</main>
+<footer>ECDF-ware Oy &copy;2024</footer>
+<script>
+// Hae artikkelin id URL-parametreistä
+const urlParams = new URLSearchParams(window.location.search);
+const articleId = urlParams.get('id');
+
+// Lataa artikkeli JSON-tiedostosta
+fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        const article = data.articles.find(a => a.id == articleId);
+        if (article) {
+            document.getElementById('articleTitle').textContent = article.title;
+            document.getElementById('articleContent').textContent = article.content;
+        } else {
+            document.getElementById('message').textContent = 'Artikkelia ei löytynyt.';
+        }
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelia.';
+    });
+
+// Muokkausnappulan toiminnallisuus
+document.getElementById('editButton').addEventListener('click', function() {
+    window.location.href = `index.html`;
+});
+
+/*/ Takaisin-painike
+document.getElementById('backButton').addEventListener('click', function() {
+    window.history.back();
+});*/
+
+fetch(`http://localhost:3000/api/articles/${articleId}`)
+    .then(response => {
+        if (!response.ok) throw new Error('Artikkelia ei löytynyt.');
+        return response.json();
+    })
+    .then(article => {
+        document.getElementById('articleTitle').textContent = article.title;
+        document.getElementById('articleContent').textContent = article.content;
+        document.getElementById('editLink').href += articleId; 
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        console.error('Virhe ladattaessa artikkelia:', error);
+        document.getElementById('message').textContent = error.message;
+    });
+
+</script>
+
+</body>
+</html>
+
+
+/public/app.js
+
+let articlesData = []; // Tähän tallennetaan kaikki artikkelit
+const articlesPerPage = 10; // Kuinka monta artikkelia per sivu
+//const maxPages = 5; // Maksimi sivujen määrä
+
+// Funktio lataa JSON-data palvelimelta
+function loadArticles() {
+    fetch('http://localhost:3000/api/articles')
+        .then(response => response.json())
+        .then(data => {
+            articlesData = data.articles;
+            displayArticles(); // Näytä artikkelit ensimmäisellä sivulla
+        })
+        .catch(error => {
+            console.error('Virhe ladattaessa JSON-tietoja:', error);
+            document.getElementById('message').textContent = 'Virhe ladattaessa artikkelitiedot.';
+        });
+}
+
+// Funktio näyttää artikkelit
+function displayArticles(page = 1) {
+    const startIndex = (page - 1) * articlesPerPage;
+    const endIndex = startIndex + articlesPerPage;
+    
+    // Sekoitetaan artikkelit satunnaisesti
+    const shuffledArticles = articlesData.sort(() => 0.5 - Math.random());
+
+    // Valitaan artikkelit nykyiselle sivulle
+    const articlesToShow = shuffledArticles.slice(startIndex, endIndex);
+    
+    // Näytetään artikkelit
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = '';
+    
+    articlesToShow.forEach(article => {
+        const articleDiv = document.createElement('div');
+        articleDiv.className = 'article';
+        articleDiv.innerHTML = `<h2>${article.title}</h2><p>${article.content}</p><a href="data.html?id=${article.id}">Lue lisää</a>`;
+        contentDiv.appendChild(articleDiv);
+    });
+
+    // Näytetään navigointi
+    setupPagination(Math.ceil(articlesData.length / articlesPerPage));
+}
+
+// Funktio asetaa sivunavigoinnin
+function setupPagination(totalPages) {
+    const paginationDiv = document.getElementById('pagination');
+    paginationDiv.innerHTML = '';
+
+    for (let i = 1; i <= Math.min(totalPages, maxPages); i++) {
+        const pageLink = document.createElement('button');
+        pageLink.innerText = i;
+        pageLink.onclick = () => displayArticles(i);
+        paginationDiv.appendChild(pageLink);
+    }
+}
+
+// Käynnistetään artikkelien lataaminen
+loadArticles();
+
+
+/public/admin.html
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hallinta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <h1>Hallinta</h1>
+    
+</header>
+
+<main>
+    <!-- Kirjautumislomake -->
+    <section id="loginSection">
+        <h2>Kirjaudu sisään</h2>
+        <form id="loginForm">
+            <label for="username">Käyttäjätunnus:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" id="loginBtn">Kirjaudu</button>
+        </form>
+        <div id="loginMessage"></div>
+    </section>
+
+    <!-- Admin-toiminnot, jotka näkyvät vain kirjautumisen jälkeen -->
+    <section id="adminSection" style="display: none;">
+        <a href="http://localhost:3000/data.edit.html">edit.html</a>
+        <a href="http://localhost:3000/">Index</a>
+        <!-- Lomake uuden artikkelin lisäämiseen -->
+        <h2>Lisää uusi artikkeli</h2>
+        <form id="addArticleForm">
+            <label for="newTitle">Otsikko:</label>
+            <input type="text" id="newTitle" required>
+
+            <label for="newContent">Sisältö:</label>
+            <textarea id="newContent" required></textarea>
+
+            <button type="button" id="addArticleBtn">Lisää artikkeli</button>
+        </form>
+        <div id="addMessage"></div>
+
+        <!-- Lista kaikista artikkeleista -->
+        <h2>Artikkelit</h2>
+        <div id="articleList"></div>
+        <div id="editMessage"></div>
+    </section>
+</main>
+
+<script>
+    // Kirjautumistiedot (voit vaihtaa nämä tiedot)
+    const adminCredentials = {
+        username: 'admin', // Admin-käyttäjätunnus
+        password: 'pass' // Admin-salasana
+    };
+
+    // Tarkistaa kirjautumistiedot
+    document.getElementById('loginBtn').addEventListener('click', function() {
+        const enteredUsername = document.getElementById('username').value;
+        const enteredPassword = document.getElementById('password').value;
+
+        if (enteredUsername === adminCredentials.username && enteredPassword === adminCredentials.password) {
+            document.getElementById('loginSection').style.display = 'none'; // Piilotetaan kirjautumislomake
+            document.getElementById('adminSection').style.display = 'block'; // Näytetään admin-sisältö
+        } else {
+            document.getElementById('loginMessage').textContent = 'Virheellinen käyttäjätunnus tai salasana.';
+        }
+    });
+
+    // Lataa ja näytä kaikki artikkelit (vain admin-käyttäjänä)
+    function loadArticles() {
+        fetch('http://localhost:3000/api/articles')
+            .then(response => response.json())
+            .then(data => {
+                const articleList = document.getElementById('articleList');
+                articleList.innerHTML = ''; // Tyhjennetään lista ennen päivitystä
+
+                data.articles.forEach(article => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.className = 'article-item';
+                    articleDiv.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <p>${article.content.substring(0, 100)}...</p>
+                        <button onclick="editArticle(${article.id})">Muokkaa</button>
+                        <button onclick="deleteArticle(${article.id})">Poista</button>
+                    `;
+                    articleList.appendChild(articleDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Virhe ladattaessa artikkeleita:', error);
+            });
+    }
+
+    // Lisää uusi artikkeli
+    document.getElementById('addArticleBtn').addEventListener('click', function() {
+        const newTitle = document.getElementById('newTitle').value;
+        const newContent = document.getElementById('newContent').value;
+
+        const newArticle = {
+            title: newTitle,
+            content: newContent
+        };
+
+        fetch('http://localhost:3000/api/articles', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newArticle)
+        })
+        .then(response => response.text())
+        .then(message => {
+            document.getElementById('addMessage').textContent = message;
+            loadArticles(); // Päivitä artikkelit
+        })
+        .catch(error => {
+            console.error('Virhe artikkelin lisäämisessä:', error);
+            document.getElementById('addMessage').textContent = 'Virhe artikkelin lisäämisessä.';
+        });
+    });
+
+    // Muokkaa artikkelia
+    function editArticle(id) {
+        const newTitle = prompt('Syötä uusi otsikko:');
+        const newContent = prompt('Syötä uusi sisältö:');
+
+        if (newTitle && newContent) {
+            const updatedArticle = {
+                title: newTitle,
+                content: newContent
+            };
+
+            fetch(`http://localhost:3000/api/articles/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedArticle)
+            })
+            .then(response => response.text())
+            .then(message => {
+                document.getElementById('editMessage').textContent = message;
+                loadArticles(); // Päivitä artikkelit
+            })
+            .catch(error => {
+                console.error('Virhe artikkelin muokkaamisessa:', error);
+                document.getElementById('editMessage').textContent = 'Virhe artikkelin muokkaamisessa.';
+            });
+        }
+    }
+
+    // Poista artikkeli
+    function deleteArticle(id) {
+        if (confirm('Haluatko varmasti poistaa tämän artikkelin?')) {
+            fetch(`http://localhost:3000/api/articles/${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.text())
+            .then(message => {
+                document.getElementById('editMessage').textContent = message;
+                loadArticles(); // Päivitä artikkelit
+            })
+            .catch(error => {
+                console.error('Virhe artikkelin poistamisessa:', error);
+                document.getElementById('editMessage').textContent = 'Virhe artikkelin poistamisessa.';
+            });
+        }
+    }
+
+    // Artikkelit ladataan, kun kirjautuminen onnistuu (kutsutaan loginin jälkeen)
+</script>
+
+</body>
+</html>
+
+
+/public/edit.html
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muokkaa Artikkelia - DataCenter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Muokkaa Artikkelia</h1>
+</header>
+
+<main>
+    <div id="editFormContainer">
+        <form id="editForm">
+            <input type="hidden" id="articleId">
+            <label for="articleTitle">Otsikko:</label>
+            <input type="text" id="articleTitle" required>
+            <label for="articleContent">Sisältö:</label>
+            <textarea id="articleContent" required></textarea>
+            <button type="submit">Tallenna muutokset</button>
+        </form>
+        <div id="message"></div>
+    </div>
+</main>
+<footer>ECDF-ware Oy &copy;2024</footer>
+
+<script>
+// Muutetaan tämä funktio JSON-tiedostosta saatujen tietojen perusteella
+const urlParams = new URLSearchParams(window.location.search);
+const articleId = urlParams.get('id');
+
+// Lataa artikkeli JSON-tiedostosta
+fetch('../data.json')
+    .then(response => response.json())
+    .then(data => {
+        const article = data.articles.find(a => a.id == articleId);
+        if (article) {
+            document.getElementById('articleId').value = article.id;
+            document.getElementById('articleTitle').value = article.title;
+            document.getElementById('articleContent').value = article.content;
+        } else {
+            document.getElementById('message').textContent = 'Artikkelia ei löytynyt.';
+        }
+    })
+    .catch(error => {
+        console.error('Virhe ladattaessa JSON-tietoja:', error);
+        document.getElementById('message').textContent = 'Virhe ladattaessa artikkelia.';
+    });
+
+// Lomakkeen lähettäminen
+document.getElementById('editForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const updatedArticle = {
+        id: parseInt(document.getElementById('articleId').value),
+        title: document.getElementById('articleTitle').value,
+        content: document.getElementById('articleContent').value
+    };
+
+    // Tässä kohdassa voisi olla palvelinpuolen koodi tiedoston tallentamiseen
+    // Esimerkiksi AJAX-pyyntö serverille, joka tallentaa tiedot JSON-tiedostoon
+    console.log('Tallennettavat tiedot:', updatedArticle);
+
+    // Tämä on vain esimerkki ja se ei oikeasti tallenna tiedostoja.
+    document.getElementById('message').textContent = 'Muutokset tallennettu! (ei oikeasti, lisää palvelinpuolen tuki)';
+});
+
+// Muokkaa artikkeli
+document.getElementById('saveButton').addEventListener('click', function() {
+    const updatedArticle = {
+        title: document.getElementById('articleTitle').value,
+        content: document.getElementById('articleContent').value
+    };
+
+    fetch(`http://localhost:3000/api/articles/${articleId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedArticle)
+    })
+    .then(response => response.text())
+    .then(message => {
+        document.getElementById('message').textContent = message;
+    })
+    .catch(error => {
+        console.error('Virhe päivittäessä artikkelia:', error);
+        document.getElementById('message').textContent = 'Virhe päivittäessä artikkelia.';
+    });
+});
+
+</script>
+
+</body>
+</html>
+
+
+/server.js
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const PORT = 3000; // Voit vaihtaa portin tarvittaessa
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Palvelin staattiset tiedostot public-kansiosta
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Lataa JSON-tiedot
+const loadData = () => {
+    const data = fs.readFileSync('data.json');
+    return JSON.parse(data);
+};
+
+// Palvelin kaikki artikkelit
+app.get('/api/articles', (req, res) => {
+    const articles = loadData();
+    res.json(articles);
+});
+
+// Palvelin yksittäinen artikkeli
+app.get('/api/articles/:id', (req, res) => {
+    const articles = loadData();
+    const article = articles.articles.find(a => a.id == req.params.id);
+    if (article) { 
+        res.json(article);
+    } else {
+        res.status(404).send('Artikkelia ei löytynyt.');
+    }
+});
+
+// Päivitä artikkeli
+app.put('/api/articles/:id', (req, res) => {
+    const articles = loadData();
+    const index = articles.articles.findIndex(a => a.id == req.params.id);
+    
+    if (index !== -1) {
+        articles.articles[index] = { id: req.params.id, ...req.body };
+        fs.writeFileSync('data.json', JSON.stringify(articles, null, 2));
+        res.send('Artikkeli päivitettiin onnistuneesti.');
+    } else {
+        res.status(404).send('Artikkelia ei löytynyt.');
+    }
+});
+
+// Lisää uusi artikkeli
+app.post('/api/articles', (req, res) => {
+    const articles = loadData();
+    const newId = articles.articles.length ? Math.max(...articles.articles.map(a => a.id)) + 1 : 1;
+    const newArticle = { id: newId, ...req.body };
+    
+    articles.articles.push(newArticle);
+    fs.writeFileSync('data.json', JSON.stringify(articles, null, 2));
+
+    res.send('Uusi artikkeli lisätty onnistuneesti.');
+});
+
+// Poista artikkeli
+app.delete('/api/articles/:id', (req, res) => {
+    const articles = loadData();
+    const articleIndex = articles.articles.findIndex(a => a.id == req.params.id);
+
+    if (articleIndex !== -1) {
+        articles.articles.splice(articleIndex, 1);
+        fs.writeFileSync('data.json', JSON.stringify(articles, null, 2));
+        res.send('Artikkeli poistettu onnistuneesti.');
+    } else {
+        res.status(404).send('Artikkelia ei löytynyt.');
+    }
+});
+
+// Käynnistä palvelin
+app.listen(PORT, () => {
+    console.log(`Palvelin käynnistetty portissa ${PORT}`);
+});
+
+
+muuta koodia niin että sovellus täsmää tämän .json tiedootn kanssa , eli että samat tiedot ovat 
+/public/data/data.json
+
+{
+    "articles": [
+      {
+        "id": 1,
+        "title": "",
+        "content": "",
+        "additional_info": "",
+        "info": {
+            "source": "",
+            "links": [
+              {
+                "label": "Linkin nimi",
+                "url": "linkin_url"
+              }
+            ],
+            "references": [
+              {
+                "title": "Viite 1",
+                "url": "url_viitteelle"
+              }
+            ]
+          },
+          "writer": "",
+          "creator": "",
+          "published_date": ""
+      }
+    }
+
+  anna kaikki 6 tiedostoa

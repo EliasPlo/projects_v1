@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muokkaa Artikkelia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Muokkaa Artikkelia</h1>
+    <form id="edit-article-form">
+        <input type="hidden" id="article-id" value="">
+        <label for="title">Otsikko:</label>
+        <input type="text" id="title" required>
+
+        <label for="content">Sisältö:</label>
+        <textarea id="content" required></textarea>
+
+        <label for="additional-info">Lisätiedot:</label>
+        <textarea id="additional-info"></textarea>
+
+        <label for="writer">Kirjoittaja:</label>
+        <input type="text" id="writer" required>
+
+        <label for="creator">Luojan nimi:</label>
+        <input type="text" id="creator" required>
+
+        <label for="source">Lähde:</label>
+        <input type="text" id="source">
+
+        <h3>Linkit</h3>
+        <div id="links-container"></div>
+        <button type="button" onclick="addLink()">Lisää linkki</button>
+
+        <h3>Viitteet</h3>
+        <div id="references-container"></div>
+        <button type="button" onclick="addReference()">Lisää viite</button>
+
+        <button type="submit">Tallenna artikkeli</button>
+    </form>
+
+    <footer>
+        ECDF-ware Oy &copy;2024 <a href="admin.html"> localhost</a>
+    </footer>
+
+    <script src="server.js"></script>
+</body>
+</html>

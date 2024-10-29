@@ -1,0 +1,54 @@
+{
+    "articles": [
+      {
+        "id": 1,
+        "title": "testi",
+        "content": "lisää",
+        "additional_info": "muuta",
+        "info": {
+            "source": "netti",
+            "links": [
+              {
+                "label": "Linkin nimi",
+                "url": "linkin_url"
+              }
+            ],
+            "references": [
+              {
+                "title": "Viite 1",
+                "url": "url_viitteelle"
+              }
+            ]
+          },
+          "writer": "",
+          "creator": "",
+          "published_date": ""
+      },
+      {
+        "id": 2,
+        "title": "",
+        "content": "",
+        "additional_info": "",
+        "info": {
+          "source": "",
+          "links": [
+            {
+              "label": "Linkin nimi",
+              "url": "linkin_url"
+            }
+          ],
+          "references": [
+            {
+              "title": "Viite 1",
+              "url": "url_viitteelle"
+            }
+          ]
+        },
+        "writer": "",
+        "creator": "",
+        "published_date": ""
+      }
+    ]
+  }
+
+  

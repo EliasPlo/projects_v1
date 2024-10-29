@@ -1,6 +1,6 @@
 let articlesData = []; // Tähän tallennetaan kaikki artikkelit
 const articlesPerPage = 10; // Kuinka monta artikkelia per sivu
-const maxPages = 5; // Maksimi sivujen määrä
+//const maxPages = 5; // Maksimi sivujen määrä
 
 // Funktio lataa JSON-data palvelimelta
 function loadArticles() {
