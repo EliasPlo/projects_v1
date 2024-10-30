@@ -1,0 +1,23 @@
+{
+    "loans": [
+      {
+        "loan_id": "loan001",
+        "loan_type": "mortgage",
+        "principal_amount": 120000.00,
+        "remaining_balance": 100000.00,
+        "monthly_payment": 800.00,
+        "interest_rate": 1.5,
+        "next_payment_due": "2024-11-05"
+      },
+      {
+        "loan_id": "loan002",
+        "loan_type": "student",
+        "principal_amount": 15000.00,
+        "remaining_balance": 10000.00,
+        "monthly_payment": 200.00,
+        "interest_rate": 2.0,
+        "next_payment_due": "2024-11-15"
+      }
+    ]
+  }
+  

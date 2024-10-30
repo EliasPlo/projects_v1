@@ -1,0 +1,17 @@
+{
+    "tax_info": {
+      "tax_id": "FI123456789",
+      "annual_income": 40000.00,
+      "tax_withheld": 5000.00,
+      "tax_year": 2024,
+      "tax_documents": [
+        {
+          "document_id": "taxdoc001",
+          "type": "tax_summary",
+          "year": 2023,
+          "download_link": "https://example.com/documents/taxdoc001"
+        }
+      ]
+    }
+  }
+  

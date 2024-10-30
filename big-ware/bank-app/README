@@ -1,0 +1,9 @@
+
+/bankapp
+    /assests
+        styles.css
+        favicon.ico
+    /data
+        acc
+        admin.json
+    /js

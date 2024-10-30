@@ -1,0 +1,25 @@
+{
+    "locations": [
+      {
+        "type": "ATM",
+        "name": "Central Helsinki ATM",
+        "coordinates": {
+          "latitude": 60.1695,
+          "longitude": 24.9354
+        },
+        "address": "Mannerheimintie 5, 00100 Helsinki",
+        "hours": "24/7"
+      },
+      {
+        "type": "branch",
+        "name": "Esplanadi Branch",
+        "coordinates": {
+          "latitude": 60.1675,
+          "longitude": 24.9427
+        },
+        "address": "Pohjoisesplanadi 17, 00130 Helsinki",
+        "hours": "Mon-Fri 9:00-16:30"
+      }
+    ]
+  }
+  

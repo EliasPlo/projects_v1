@@ -1,0 +1,17 @@
+{
+    "user_id": "123456",
+    "two_factor_auth": true,
+    "security_questions": [
+      {
+        "question": "What was the name of your first pet?",
+        "answer_set": true
+      },
+      {
+        "question": "What is your mother's maiden name?",
+        "answer_set": true
+      }
+    ],
+    "last_password_change": "2024-09-01T14:00:00Z",
+    "last_security_update": "2024-10-15T10:00:00Z"
+  }
+  

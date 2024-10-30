@@ -1,0 +1,19 @@
+{
+    "notifications": [
+      {
+        "notification_id": "notif001",
+        "type": "payment_due",
+        "message": "Electric Company bill due on 2024-11-15",
+        "timestamp": "2024-10-30T08:00:00Z",
+        "read": false
+      },
+      {
+        "notification_id": "notif002",
+        "type": "low_balance",
+        "message": "Balance below 100 EUR on account FI1234567890123456",
+        "timestamp": "2024-10-29T16:45:00Z",
+        "read": true
+      }
+    ]
+  }
+  

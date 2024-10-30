@@ -1,0 +1,19 @@
+{
+    "user_id": "123456",
+    "name": "Matti Meikäläinen",
+    "email": "matti.meikalainen@example.com",
+    "phone": "+358401234567",
+    "address": {
+      "street": "Esimerkkitie 10",
+      "city": "Helsinki",
+      "zip": "00100",
+      "country": "Finland"
+    },
+    "accounts": ["FI1234567890123456", "FI6543210987654321"],
+    "preferences": {
+      "language": "fi",
+      "currency": "EUR",
+      "notifications": true
+    }
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "cache": {
+      "account_balance": {
+        "account_number": "FI1234567890123456",
+        "balance": 2500.75,
+        "timestamp": "2024-10-30T09:00:00Z"
+      },
+      "currency_rates": {
+        "EURUSD": {
+          "rate": 1.12,
+          "timestamp": "2024-10-30T09:00:00Z"
+        },
+        "EURJPY": {
+          "rate": 130.67,
+          "timestamp": "2024-10-30T09:00:00Z"
+        }
+      }
+    }
+  }
+  

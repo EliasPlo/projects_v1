@@ -1,0 +1,23 @@
+{
+    "cards": [
+      {
+        "card_id": "card001",
+        "type": "debit",
+        "card_number": "1234 5678 9012 3456",
+        "expiration_date": "2026-10",
+        "status": "active",
+        "spending_limit": 1000.00,
+        "currency": "EUR",
+        "transaction_history": [
+          {
+            "transaction_id": "cardtx001",
+            "date": "2024-10-29T18:45:00Z",
+            "amount": -25.00,
+            "merchant": "Online Store",
+            "description": "Purchase"
+          }
+        ]
+      }
+    ]
+  }
+  

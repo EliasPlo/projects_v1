@@ -1,0 +1,24 @@
+{
+    "account_number": "FI1234567890123456",
+    "transactions": [
+      {
+        "transaction_id": "tx123",
+        "date": "2024-10-28T15:30:00Z",
+        "amount": -50.00,
+        "currency": "EUR",
+        "counterparty": "Kauppa Oy",
+        "type": "purchase",
+        "description": "Groceries"
+      },
+      {
+        "transaction_id": "tx124",
+        "date": "2024-10-27T10:00:00Z",
+        "amount": 200.00,
+        "currency": "EUR",
+        "counterparty": "Employer Inc",
+        "type": "salary",
+        "description": "October salary"
+      }
+    ]
+  }
+  

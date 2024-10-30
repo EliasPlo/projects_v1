@@ -1,0 +1,20 @@
+{
+    "accounts": [
+      {
+        "account_number": "FI1234567890123456",
+        "account_type": "checking",
+        "balance": 2500.75,
+        "currency": "EUR",
+        "credit_limit": 500,
+        "last_transaction": "2024-10-28T15:35:20Z"
+      },
+      {
+        "account_number": "FI6543210987654321",
+        "account_type": "savings",
+        "balance": 5000.00,
+        "currency": "EUR",
+        "last_transaction": "2024-10-25T09:15:10Z"
+      }
+    ]
+  }
+  

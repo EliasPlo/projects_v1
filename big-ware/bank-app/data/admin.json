@@ -1,0 +1,106 @@
+{
+    "admins": [
+      {
+        "admin_id": 1,
+        "name": "sysadmin",
+        "email": "",
+        "role": "super_admin",
+        "permissions": [
+          "view_all_accounts",
+          "modify_user_permissions",
+          "access_audit_logs",
+          "manage_transactions",
+          "view_reports",
+          "approve_loans",
+          "close_accounts"
+        ],
+        "last_login": "2024-10-29T12:00:00Z",
+        "status": "active",
+        "assigned_branches": ["Helsinki HQ", "Tampere"]
+      },
+      {
+        "admin_id": "admin002",
+        "name": "Pekka Laaksonen",
+        "email": "pekka.laaksonen@bank.fi",
+        "role": "branch_manager",
+        "permissions": [
+          "view_all_accounts",
+          "manage_transactions",
+          "approve_loans",
+          "view_reports"
+        ],
+        "last_login": "2024-10-28T08:30:00Z",
+        "status": "active",
+        "assigned_branches": ["Turku"]
+      },
+      {
+        "admin_id": "admin003",
+        "name": "Sanna Heikkilä",
+        "email": "sanna.heikkila@bank.fi",
+        "role": "auditor",
+        "permissions": [
+          "view_all_accounts",
+          "access_audit_logs",
+          "view_reports"
+        ],
+        "last_login": "2024-10-29T09:15:00Z",
+        "status": "active",
+        "assigned_branches": ["Helsinki HQ"]
+      }
+    ],
+    "admin_roles": [
+      {
+        "role_name": "super_admin",
+        "description": "Full access to all sys_admin functions and settings across all branches",
+        "default_permissions": [
+          "view_all_accounts",
+          "modify_user_permissions",
+          "access_audit_logs",
+          "manage_transactions",
+          "view_reports",
+          "create_new_accounts", 
+          "approve_loans",
+          "close_accounts",
+          "send_notification",
+          "create_admin_users",
+          "modify_admin_settings"
+        ]
+      },
+      {
+        "role_name": "admin",
+        "description": "Full access to all admin functions and settings across all industries",
+        "default_permissions": [
+          "view_all_accounts",
+          "modify_user_permissions",
+          "access_audit_logs",
+          "manage_transactions",
+          "view_reports",
+          "create_new_accounts", 
+          "approve_loans",
+          "send_notification",
+          "close_accounts"
+        ]
+      },
+      {
+        "role_name": "branch_manager",
+        "description": "Can manage accounts and approve transactions for assigned branches",
+        "default_permissions": [
+          "view_all_accounts",
+          "manage_transactions",
+          "approve_loans",
+          "view_reports",
+          "create_new_accounts"
+        ]
+      },
+      {
+        "role_name": "auditor",
+        "description": "Limited access to view accounts and audit logs for review purposes",
+        "default_permissions": [
+          "view_all_accounts",
+          "access_audit_logs",
+          "send_notification",
+          "view_reports"
+        ]
+      }
+    ]
+  }
