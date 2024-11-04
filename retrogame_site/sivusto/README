@@ -1,0 +1,140 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const loginButton = document.getElementById('loginButton');
+    
+    // Navigate to login.html when the login button is clicked
+    if (loginButton) {
+        loginButton.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    }
+
+    // Handle the login form submission
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Estää oletustoiminnon
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/data/users.json')
+                .then(response => response.json())
+                .then(data => {
+                    const user = data.users.find(user => user.username === username && user.password === password);
+                    
+                    if (user) {
+                        document.getElementById('loginMessage').innerText = 'Kirjautuminen onnistui!';
+                        // Voit lisätä lisää logiikkaa tässä, kuten siirtämisen toiseen sivuun
+                        // window.location.href = 'index.html'; // Esimerkiksi takaisin etusivulle
+                    } else {
+                        document.getElementById('loginMessage').innerText = 'Virheellinen käyttäjänimi tai salasana.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Virhe käyttäjätietojen haussa:', error);
+                });
+        });
+    }
+});
+
+
+muuta että admin käyttäjä voi kirjautua 
+ja muuta muitta tiedostoja että adimin voi muutta tuloksia vapaasti
+
+
+
+muuta users.json tiedtoa niin että siellä on vain admin käyttjäjiä, jotka voivat muokata ja lisätä käyttäjien peli tuloksia vapaasti eli login.html
+
+jokaisen pelin sivulla olisi lisä tietoa nappi joka tulostaa tulosten pelinnimen jälkeen tietoa pelistä jotka ovat games.json tiedstossa kuten tekijä, julkaisija ja julkaisu vuosi ja muuta 
+
+
+
+# peli.html
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelin Hall of Fame</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Retrogamehouse Logo" class="logo">
+        <button class="login-btn">Kirjaudu</button>
+    </header>
+
+    <main>
+        <h1 id="gameTitle"></h1>
+        <img id="gameImage" alt="Pelin kuva" class="game-image">
+        
+        <input type="text" id="searchPlayers" placeholder="Hae pelaajia..." onkeyup="searchPlayers()">
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <p>© Riveria 2024</p>
+    </footer>
+
+    <script src="assets/js/game.js"></script>
+</body>
+</html>
+
+# 
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peli - Hall of Fame</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Retrogamehouse Logo" class="logo">
+    </header>
+
+    <main>
+        <h1 id="gameName"></h1>
+        <img id="gameImage" alt="Pelin kuva" style="max-width: 100%; height: auto;">
+        
+        <button id="moreInfoButton">Näytä lisätiedot</button>
+        <div id="gameInfo" style="display: none;">
+            <p><strong>Tekijä:</strong> <span id="gameMaker"></span></p>
+            <p><strong>Julkaisija:</strong> <span id="gamePublisher"></span></p>
+            <p><strong>Julkaisuvuosi:</strong> <span id="gameReleaseYear"></span></p>
+        </div>
+
+        <h2>Hall of Fame</h2>
+        <table id="scoresTable">
+            <thead>
+                <tr>
+                    <th>Sijoitus</th>
+                    <th>Käyttäjänimi</th>
+                    <th>Tulos</th>
+                    <th>Päivämäärä</th>
+                </tr>
+            </thead>
+            <tbody id="scoresList"></tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p> &copy; Riveria 2024</p>
+    </footer>
+
+    <script src="assets/js/game.js"></script>
+</body>
+
+#
+
+
+
+#
+
+
+
+#
