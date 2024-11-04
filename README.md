@@ -8,8 +8,13 @@ https://medium.com/@gokayburuc/53-project-ideas-from-beginner-to-advanced-progra
 
 https://www.geeksforgeeks.org/java-projects/
 
+(http://rumkin.com/tools/cipher/)
 
+Text to hex/binary converter
 
+Text encryption/decryption 
+joka cryptaa binary, base64 muotoon tekstiä ja pystyy paluttamaan normaali teksitn 
+joka toimii localhost:3090
 
 
 DA

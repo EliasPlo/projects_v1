@@ -1,0 +1,18 @@
+pip install Flask
+python crypto_server.py
+
+
+curl -X POST http://localhost:3090/encrypt -H "Content-Type: application/json" -d '{"text": "Hello, World!"}'
+
+
+{
+  "base64": "SGVsbG8sIFdvcmxkIQ==",
+  "binary": "01001000011001010110110001101100011011110010110000100000010101110110111101110010011011000110010000100001"
+}
+
+
+curl -X POST http://localhost:3090/decrypt -H "Content-Type: application/json" -d '{"base64": "SGVsbG8sIFdvcmxkIQ=="}'
+curl -X POST http://localhost:3090/decrypt -H "Content-Type: application/json" -d '{"binary": "01001000011001010110110001101100011011110010110000100000010101110110111101110010011011000110010000100001"}'
+{
+  "text": "Hello, World!"
+}
