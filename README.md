@@ -15,7 +15,9 @@ Text to hex/binary converter
 Text encryption/decryption 
 joka cryptaa binary, base64 muotoon tekstiä ja pystyy paluttamaan normaali teksitn 
 joka toimii localhost:3090
-tee javasript
+tee javasript ja html
+crypttattu data tallentaan tiedstohin jotka ovat /data/crypted kasniossa
+ja kyn decryptanaan sillin tiedot tallentaan /data/decryptrd kansio tiedotoihin
 
 
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt Text</title>
+</head>
+<body>
+    <h1>Decrypt Text</h1>
+
+    <form id="decrypt-form">
+        <label for="file-list">Select Encrypted File:</label>
+        <select id="file-list"></select><br>
+
+        <button type="button" onclick="decryptText()">Decrypt</button>
+    </form>
+
+    <script>
+        async function decryptText() {
+            const file = document.getElementById("file-list").value;
+            
+            const response = await fetch("http://localhost:3090/decrypt", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ file })
+            });
+            
+            const data = await response.json();
+            alert("Decrypted text saved to file: " + data.file);
+            loadFiles();
+        }
+
+        async function loadFiles() {
+            const response = await fetch("http://localhost:3090/files/encrypted");
+            const files = await response.json();
+            const fileList = document.getElementById("file-list");
+            fileList.innerHTML = "";
+            files.forEach(file => {
+                const option = document.createElement("option");
+                option.value = file;
+                option.textContent = file;
+                fileList.appendChild(option);
+            });
+        }
+
+        window.onload = loadFiles;
+    </script>
+</body>
+</html>

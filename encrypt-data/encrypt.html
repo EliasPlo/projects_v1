@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Text</title>
+</head>
+<body>
+    <h1>Encrypt Text</h1>
+    
+    <form id="encrypt-form">
+        <textarea id="encrypt-input" placeholder="Enter text to encrypt" rows="4" cols="50"></textarea><br>
+        
+        <label for="format">Select Format:</label>
+        <select id="format">
+            <option value="base64">Base64</option>
+            <option value="binary">Binary</option>
+        </select><br>
+        
+        <button type="button" onclick="encryptText()">Encrypt</button>
+    </form>
+
+    <h2>Existing Files</h2>
+    <select id="file-list"></select>
+
+    <script>
+        async function encryptText() {
+            const text = document.getElementById("encrypt-input").value;
+            const format = document.getElementById("format").value;
+            
+            const response = await fetch("http://localhost:3090/encrypt", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text, format })
+            });
+            
+            const data = await response.json();
+            alert("Encrypted text saved to file: " + data.file);
+            loadFiles();
+        }
+
+        async function loadFiles() {
+            const response = await fetch("http://localhost:3090/files/encrypted");
+            const files = await response.json();
+            const fileList = document.getElementById("file-list");
+            fileList.innerHTML = "";
+            files.forEach(file => {
+                const option = document.createElement("option");
+                option.value = file;
+                option.textContent = file;
+                fileList.appendChild(option);
+            });
+        }
+
+        window.onload = loadFiles;
+    </script>
+</body>
+</html>
