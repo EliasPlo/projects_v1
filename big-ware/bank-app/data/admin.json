@@ -19,7 +19,7 @@
         "assigned_branches": ["Helsinki HQ", "Tampere"]
       },
       {
-        "admin_id": "admin002",
+        "admin_id": 2,
         "name": "Pekka Laaksonen",
         "email": "pekka.laaksonen@bank.fi",
         "role": "branch_manager",
@@ -34,7 +34,7 @@
         "assigned_branches": ["Turku"]
       },
       {
-        "admin_id": "admin003",
+        "admin_id": 3,
         "name": "Sanna Heikkilä",
         "email": "sanna.heikkila@bank.fi",
         "role": "auditor",
@@ -58,12 +58,17 @@
           "access_audit_logs",
           "manage_transactions",
           "view_reports",
+          "view_user_transaction_history",
           "create_new_accounts", 
           "approve_loans",
           "close_accounts",
           "send_notification",
           "create_admin_users",
-          "modify_admin_settings"
+          "manage_user_profile", 
+          "modify_admin_settings",
+          "reset_user_passwords",          
+          "freeze_account", 
+          "access_sensitive_data"
         ]
       },
       {
@@ -75,9 +80,14 @@
           "access_audit_logs",
           "manage_transactions",
           "view_reports",
+          "view_user_transaction_history",
+          "reset_user_passwords",          
           "create_new_accounts", 
+          "manage_user_profile", 
           "approve_loans",
           "send_notification",
+          "access_sensitive_data", 
+          "freeze_account", 
           "close_accounts"
         ]
       },
@@ -89,6 +99,10 @@
           "manage_transactions",
           "approve_loans",
           "view_reports",
+          "view_user_transaction_history",
+          "access_audit_logs",
+          "manage_user_profile", 
+          "reset_user_passwords",          
           "create_new_accounts"
         ]
       },
@@ -97,8 +111,11 @@
         "description": "Limited access to view accounts and audit logs for review purposes",
         "default_permissions": [
           "view_all_accounts",
+          "view_user_transaction_history",
           "access_audit_logs",
           "send_notification",
+          "manage_user_profile", 
+          "reset_user_passwords",          
           "view_reports"
         ]
       }

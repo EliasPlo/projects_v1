@@ -20,6 +20,10 @@ crypttattu data tallentaan tiedstohin jotka ovat /data/crypted kasniossa
 ja kyn decryptanaan sillin tiedot tallentaan /data/decryptrd kansio tiedotoihin
 
 
+https://github.com/webkehitys
+
+https://mui.com/material-ui/
+
 
 DA
 https://chatgpt.com/c/67221c20-f3ec-8012-abc1-7b7044a1f287

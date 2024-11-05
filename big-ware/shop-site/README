@@ -1,0 +1,4 @@
+tee kauppa sivu käyttäen html ja javascript (älä käytä React tai node.js tai joitain muita javascript kirjatoja), joka toimii Live Server
+
+data tallennetaan .json tiedostoihin jotk ovat /data kansiossa
+
