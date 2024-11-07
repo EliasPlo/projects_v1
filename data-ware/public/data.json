@@ -1,54 +1,437 @@
 {
-    "articles": [
-      {
-        "id": 1,
-        "title": "testi",
-        "content": "lisää",
-        "additional_info": "muuta",
-        "info": {
-            "source": "netti",
-            "links": [
-              {
-                "label": "Linkin nimi",
-                "url": "linkin_url"
-              }
-            ],
-            "references": [
-              {
-                "title": "Viite 1",
-                "url": "url_viitteelle"
-              }
-            ]
-          },
-          "writer": "",
-          "creator": "",
-          "published_date": ""
+  "articles": [
+    {
+      "id": 1050,
+      "title": "Introduction to Machine Learning",
+      "content": "Machine learning is a field of artificial intelligence that focuses on enabling computers to learn from data and make predictions or decisions without being explicitly programmed. Common applications include image recognition, recommendation systems, and natural language processing.",
+      "additional_info": "Overview of common algorithms and applications.",
+      "info": {
+        "source": "Internet",
+        "links": [
+          {
+            "label": "Machine Learning Basics",
+            "url": "https://example.com/ml-basics"
+          }
+        ],
+        "references": [
+          {
+            "title": "Advanced Machine Learning",
+            "url": "data.html?id=1051"
+          }
+        ]
       },
-      {
-        "id": 2,
-        "title": "",
-        "content": "",
-        "additional_info": "",
-        "info": {
-          "source": "",
-          "links": [
-            {
-              "label": "Linkin nimi",
-              "url": "linkin_url"
-            }
-          ],
-          "references": [
-            {
-              "title": "Viite 1",
-              "url": "url_viitteelle"
-            }
-          ]
-        },
-        "writer": "",
-        "creator": "",
-        "published_date": ""
-      }
-    ]
-  }
+      "writer": "ChatGPT",
+      "creator": "adm2",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1100,
+      "title": "History of Artificial Intelligence",
+      "content": "Artificial intelligence has evolved significantly since its inception in the mid-20th century. Early AI research focused on symbolic reasoning, but advancements in machine learning and neural networks have driven recent breakthroughs.",
+      "additional_info": "Key milestones in AI development.",
+      "info": {
+        "source": "Historical records",
+        "links": [
+          {
+            "label": "AI Timeline",
+            "url": "https://example.com/ai-timeline"
+          }
+        ],
+        "references": [
+          {
+            "title": "Evolution of AI",
+            "url": "data.html?id=1101"
+          }
+        ]
+      },
+      "writer": "HistorianBot",
+      "creator": "adm3",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1200,
+      "title": "Basics of Quantum Computing",
+      "content": "Quantum computing utilizes principles of quantum mechanics to process information. Unlike classical computers, quantum computers use qubits, which can represent multiple states simultaneously due to superposition and entanglement.",
+      "additional_info": "Introduction to quantum mechanics in computing.",
+      "info": {
+        "source": "Science journal",
+        "links": [
+          {
+            "label": "Quantum Mechanics and Computing",
+            "url": "https://example.com/quantum"
+          }
+        ],
+        "references": [
+          {
+            "title": "Quantum Computing Explained",
+            "url": "data.html?id=1201"
+          }
+        ]
+      },
+      "writer": "QuantumBot",
+      "creator": "adm4",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1250,
+      "title": "The Role of Cybersecurity",
+      "content": "Cybersecurity involves protecting computer systems and networks from digital attacks. Key areas include encryption, intrusion detection, and secure software development practices.",
+      "additional_info": "Overview of cybersecurity best practices.",
+      "info": {
+        "source": "Security publications",
+        "links": [
+          {
+            "label": "Cybersecurity Fundamentals",
+            "url": "https://example.com/cybersecurity"
+          }
+        ],
+        "references": [
+          {
+            "title": "Cyber Threats",
+            "url": "data.html?id=1251"
+          }
+        ]
+      },
+      "writer": "SecBot",
+      "creator": "adm5",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1300,
+      "title": "Introduction to Data Science",
+      "content": "Data science combines statistical methods, computer science, and domain expertise to extract insights from data. Common tools include Python, R, and SQL for data processing and analysis.",
+      "additional_info": "Explores skills and tools used in data science.",
+      "info": {
+        "source": "Data Science Handbook",
+        "links": [
+          {
+            "label": "Getting Started with Data Science",
+            "url": "https://example.com/data-science"
+          }
+        ],
+        "references": [
+          {
+            "title": "Data Science in Business",
+            "url": "data.html?id=1301"
+          }
+        ]
+      },
+      "writer": "DataBot",
+      "creator": "adm6",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1350,
+      "title": "Exploring Blockchain Technology",
+      "content": "Blockchain is a distributed ledger technology that ensures transparency and security in data transactions. It is the foundation of cryptocurrencies like Bitcoin and is also used in supply chain and healthcare.",
+      "additional_info": "Introduction to blockchain applications.",
+      "info": {
+        "source": "Blockchain magazine",
+        "links": [
+          {
+            "label": "Understanding Blockchain",
+            "url": "https://example.com/blockchain"
+          }
+        ],
+        "references": [
+          {
+            "title": "Blockchain and Cryptocurrencies",
+            "url": "data.html?id=1351"
+          }
+        ]
+      },
+      "writer": "CryptoBot",
+      "creator": "adm7",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1400,
+      "title": "Cloud Computing Essentials",
+      "content": "Cloud computing provides scalable computing resources over the internet. It enables businesses to store and process data in remote servers rather than on-premises hardware.",
+      "additional_info": "Discusses cloud service models and deployment.",
+      "info": {
+        "source": "Cloud research",
+        "links": [
+          {
+            "label": "Cloud Computing Guide",
+            "url": "https://example.com/cloud"
+          }
+        ],
+        "references": [
+          {
+            "title": "The Cloud Revolution",
+            "url": "data.html?id=1401"
+          }
+        ]
+      },
+      "writer": "CloudBot",
+      "creator": "adm8",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1450,
+      "title": "Getting Started with Web Development",
+      "content": "Web development involves building websites and web applications. HTML, CSS, and JavaScript form the foundation, while frameworks like React and Vue are popular choices for creating dynamic user interfaces.",
+      "additional_info": "A beginner's guide to web technologies.",
+      "info": {
+        "source": "Web Dev Magazine",
+        "links": [
+          {
+            "label": "Introduction to Web Development",
+            "url": "https://example.com/webdev"
+          }
+        ],
+        "references": [
+          {
+            "title": "Front-End Frameworks",
+            "url": "data.html?id=1451"
+          }
+        ]
+      },
+      "writer": "WebBot",
+      "creator": "adm9",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1500,
+      "title": "Digital Marketing Basics",
+      "content": "Digital marketing leverages online platforms to promote products and services. Key strategies include SEO, content marketing, and social media marketing to reach and engage audiences effectively.",
+      "additional_info": "Overview of digital marketing channels.",
+      "info": {
+        "source": "Marketing Guide",
+        "links": [
+          {
+            "label": "Introduction to Digital Marketing",
+            "url": "https://example.com/digital-marketing"
+          }
+        ],
+        "references": [
+          {
+            "title": "Marketing Trends",
+            "url": "data.html?id=1501"
+          }
+        ]
+      },
+      "writer": "MarketerBot",
+      "creator": "adm10",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1550,
+      "title": "Artificial Intelligence in Healthcare",
+      "content": "Artificial intelligence is transforming healthcare by providing predictive analytics, automating diagnostic processes, and enhancing personalized treatment plans. AI is particularly beneficial in areas such as medical imaging, drug discovery, and patient monitoring.",
+      "additional_info": "Exploring AI's impact on medical practices.",
+      "info": {
+        "source": "HealthTech Journal",
+        "links": [
+          {
+            "label": "AI in Healthcare",
+            "url": "https://example.com/ai-healthcare"
+          }
+        ],
+        "references": [
+          {
+            "title": "Medical AI Advancements",
+            "url": "data.html?id=1551"
+          }
+        ]
+      },
+      "writer": "HealthBot",
+      "creator": "adm11",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1600,
+      "title": "5G Technology and Its Impact",
+      "content": "5G technology promises to revolutionize communication networks by offering faster speeds, lower latency, and the ability to connect more devices simultaneously. It will impact industries like autonomous driving, telemedicine, and the Internet of Things (IoT).",
+      "additional_info": "Examines the potential of 5G across industries.",
+      "info": {
+        "source": "Tech Review",
+        "links": [
+          {
+            "label": "5G Explained",
+            "url": "https://example.com/5g-tech"
+          }
+        ],
+        "references": [
+          {
+            "title": "5G Applications",
+            "url": "data.html?id=1601"
+          }
+        ]
+      },
+      "writer": "TechBot",
+      "creator": "adm12",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1650,
+      "title": "Sustainable Energy Solutions",
+      "content": "Sustainable energy solutions focus on using renewable resources such as solar, wind, and hydropower to reduce carbon emissions and combat climate change. These technologies are becoming increasingly important in reducing dependence on fossil fuels.",
+      "additional_info": "Focus on renewable energy technologies.",
+      "info": {
+        "source": "Energy Today",
+        "links": [
+          {
+            "label": "Renewable Energy Sources",
+            "url": "https://example.com/renewable-energy"
+          }
+        ],
+        "references": [
+          {
+            "title": "Energy Efficiency Innovations",
+            "url": "data.html?id=1651"
+          }
+        ]
+      },
+      "writer": "EnergyBot",
+      "creator": "adm13",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1700,
+      "title": "The Future of Remote Work",
+      "content": "Remote work has become a significant part of the global workforce. With the rise of digital tools, companies are rethinking traditional office spaces. The future of remote work is expected to include hybrid models, flexible hours, and new forms of team collaboration.",
+      "additional_info": "Insights into the remote work evolution.",
+      "info": {
+        "source": "Workplace Trends",
+        "links": [
+          {
+            "label": "Remote Work Guide",
+            "url": "https://example.com/remote-work"
+          }
+        ],
+        "references": [
+          {
+            "title": "Future of Work",
+            "url": "data.html?id=1701"
+          }
+        ]
+      },
+      "writer": "WorkBot",
+      "creator": "adm14",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1750,
+      "title": "Understanding Cryptocurrencies",
+      "content": "Cryptocurrencies are digital currencies that use cryptography for security. Bitcoin, the first and most well-known cryptocurrency, operates on decentralized networks using blockchain technology. Cryptocurrencies are often used for online transactions and investments.",
+      "additional_info": "An introduction to cryptocurrency markets.",
+      "info": {
+        "source": "Crypto World",
+        "links": [
+          {
+            "label": "Getting Started with Cryptos",
+            "url": "https://example.com/cryptos"
+          }
+        ],
+        "references": [
+          {
+            "title": "Blockchain in Cryptocurrency",
+            "url": "data.html?id=1751"
+          }
+        ]
+      },
+      "writer": "CryptoBot",
+      "creator": "adm15",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1800,
+      "title": "The Evolution of Video Games",
+      "content": "Video games have evolved from simple 2D arcade games to highly immersive virtual reality experiences. With advances in graphics, artificial intelligence, and online multiplayer gaming, video games have become a cultural phenomenon.",
+      "additional_info": "A brief history of video games and trends.",
+      "info": {
+        "source": "Gaming Magazine",
+        "links": [
+          {
+            "label": "Video Game History",
+            "url": "https://example.com/video-games"
+          }
+        ],
+        "references": [
+          {
+            "title": "VR Gaming Future",
+            "url": "data.html?id=1801"
+          }
+        ]
+      },
+      "writer": "GameBot",
+      "creator": "adm16",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1850,
+      "title": "The Importance of Mental Health",
+      "content": "Mental health is a vital aspect of overall well-being. Mental illnesses such as depression and anxiety can affect anyone, and it is important to seek support and practice self-care strategies for maintaining mental health.",
+      "additional_info": "Raising awareness about mental health care.",
+      "info": {
+        "source": "Health Magazine",
+        "links": [
+          {
+            "label": "Mental Health Awareness",
+            "url": "https://example.com/mental-health"
+          }
+        ],
+        "references": [
+          {
+            "title": "Mental Health Resources",
+            "url": "data.html?id=1851"
+          }
+        ]
+      },
+      "writer": "MindBot",
+      "creator": "adm17",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1900,
+      "title": "The Role of Education in Society",
+      "content": "Education is crucial for the development of individuals and societies. It provides the tools needed to solve problems, communicate effectively, and contribute to the betterment of society. Innovations in education, such as online learning, are shaping the future of education globally.",
+      "additional_info": "The power of education to shape the future.",
+      "info": {
+        "source": "Education Today",
+        "links": [
+          {
+            "label": "Education's Impact on Society",
+            "url": "https://example.com/education"
+          }
+        ],
+        "references": [
+          {
+            "title": "Future of Education",
+            "url": "data.html?id=1901"
+          }
+        ]
+      },
+      "writer": "EdBot",
+      "creator": "adm18",
+      "published_date": "7.11.2024"
+    },
+    {
+      "id": 1950,
+      "title": "Space Exploration and Its Future",
+      "content": "Space exploration has captivated humanity's imagination for centuries. With advances in technology, space agencies and private companies are planning missions to the Moon, Mars, and beyond. The future of space exploration could lead to new discoveries and even human settlements on other planets.",
+      "additional_info": "Exploring the possibilities of future space missions.",
+      "info": {
+        "source": "Space Journal",
+        "links": [
+          {
+            "label": "Exploring Space Frontiers",
+            "url": "https://example.com/space-exploration"
+          }
+        ],
+        "references": [
+          {
+            "title": "Mars Mission",
+            "url": "data.html?id=1951"
+          }
+        ]
+      },
+      "writer": "SpaceBot",
+      "creator": "adm19",
+      "published_date": "7.11.2024"
+    }
+  ]
+}
 
-  

@@ -2,7 +2,7 @@ let articles = []; // Stores all articles data
 const articlesContainer = document.getElementById("articles-container");
 const paginationControls = document.getElementById("pagination-controls");
 const searchInput = document.getElementById("search");
-const articlesPerPage = 20; // Maximum articles per page
+const articlesPerPage = 10; // Maximum articles per page
 let currentPage = 1;
 
 // Function to fetch articles

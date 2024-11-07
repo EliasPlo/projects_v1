@@ -1,0 +1,58 @@
+{
+    "articles": [
+      {
+        "id": 1,
+        "title": "Python",
+        "content": "Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python has a vast standard library and is commonly used for web development (Django, Flask), data analysis (Pandas, NumPy), machine learning (TensorFlow, scikit-learn), and automation. Its syntax is designed to be clean and easy to learn, making it a popular choice for beginners as well as experienced developers.",
+        "additional_info": "muuta",
+        "info": {
+            "source": "netti",
+            "links": [
+              {
+                "label": "Linkin nimi",
+                "url": "linkin_url"
+              }
+            ],
+            "references": [
+              {
+                "title": "Viite 1",
+                "url": "data.html?id=2"
+              }
+            ]
+          },
+          "writer": "ChatGPT",
+          "creator": "adm1",
+          "published_date": "7.11.2024"
+      },
+      {
+        "id": 2,
+        "title": "",
+        "content": "",
+        "additional_info": "",
+        "info": {
+          "source": "",
+          "links": [
+            {
+              "label": "Linkin nimi",
+              "url": "linkin_url"
+            }
+          ],
+          "references": [
+            {
+              "title": "Viite 1",
+              "url": "data.html?id=1"
+            },
+            {
+              "title": "Viite 1",
+              "url": "data.html?id=123"
+            }
+          ]
+        },
+        "writer": "user1",
+        "creator": "adm1",
+        "published_date": "7.11.2024"
+      }
+    ]
+  }
+
+  

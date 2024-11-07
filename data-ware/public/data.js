@@ -25,7 +25,8 @@ function fetchArticleById() {
 function displayArticle(article) {
     articleContainer.innerHTML = `
         <h2>${article.title}</h2>
-        <p>${article.content}</p>
+        <p>${article.content}</p><br>
+        <p>${article.additional_info}</p>
         <div class="links">
             <strong>Links:</strong> ${article.info.links.map(link => `<a href="${link.url}" target="_blank">${link.label}</a>`).join(", ")}
         </div>
@@ -34,7 +35,7 @@ function displayArticle(article) {
         </div>
         <p><strong>Writer:</strong> ${article.writer}</p>
         <p><strong>Creator:</strong> ${article.creator}</p>
-        <p><strong>Published Date:</strong> ${article.published_date}</p>
+        <p><strong>Published Date:</strong> ${article.published_date}</p><br>
     `;
 }
 
