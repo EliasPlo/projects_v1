@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+
+  /* Aiemmat tyylit pysyvät samana */
+
+#cart-items, #product-details {
+  padding: 20px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Aiemmat tyylit pysyvät samoina */
+
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#pagination-controls button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#pagination-controls button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+#page-indicator {
+  font-size: 16px;
+}
+
+#cart-button1 {
+  color: #fff;
+  background-color: #007bff;
+  padding: 6px;
+  border-radius: 5px;
+  margin-right: 6px;
+  text-decoration: none;
+}
+
+#cart-button1:hover {
+  background-color: #004fa3;
+}
+
+/* Aiemmat tyylit pysyvät samana */
+
+#checkout-form, #order-confirmation {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#checkout-form label, #checkout-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#checkout-form input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#checkout-form button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#checkout-form button:hover {
+  background-color: #218838;
+}
+
+#order-confirmation h2 {
+  color: #28a745;
+}

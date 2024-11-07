@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kauppa</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Verkkokauppa</h1>
+    <nav>
+      <div id="cart-summary">
+        <a id="cart-button1" href="cart.html">Ostoskori:</a><span id="cart-count">0</span> tuotetta - <span id="cart-total">0.00 €</span>
+        
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="products">
+      <h2>Tuotteet</h2>
+      <div id="product-list"></div>
+      <div id="pagination-controls">
+        <button id="prev-page" onclick="changePage(-1)">Edellinen</button>
+        <span id="page-indicator">Sivu: <span id="current-page">1</span></span>
+        <button id="next-page" onclick="changePage(1)">Seuraava</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    ECDF-ware Oy &copy;2024 
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

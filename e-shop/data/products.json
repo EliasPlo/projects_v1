@@ -1,0 +1,387 @@
+[
+    {
+        "id": 1,
+        "name": "Kahvipannu",
+        "description": "Perinteinen emaloitu kahvipannu, sopii kaikille liesityypeille.",
+        "price": 15.99,
+        "image": "images/product1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Teepannu",
+        "description": "Keraaminen teepannu, jossa sihti irtoteelle.",
+        "price": 19.99,
+        "image": "images/product2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Keittiövaaka",
+        "description": "Digitaalinen keittiövaaka tarkkaan mittaukseen.",
+        "price": 12.49,
+        "image": "images/product3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Leikkuulauta",
+        "description": "Kestävä bambuinen leikkuulauta päivittäiseen käyttöön.",
+        "price": 8.99,
+        "image": "images/product4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Veitsisetti",
+        "description": "Kolmen terävän keittiöveitsen setti.",
+        "price": 34.99,
+        "image": "images/product5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Paistinpannu",
+        "description": "Tarttumaton paistinpannu keraamisella pinnalla.",
+        "price": 29.99,
+        "image": "images/product6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Kahvimylly",
+        "description": "Sähköinen kahvimylly tuoreelle kahville.",
+        "price": 24.99,
+        "image": "images/product7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Sähkövatkain",
+        "description": "Kevyt ja tehokas sähkövatkain.",
+        "price": 19.49,
+        "image": "images/product8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Leivänpaahdin",
+        "description": "Kaksipaikkainen leivänpaahdin säädettävällä paahtoasteella.",
+        "price": 27.99,
+        "image": "images/product9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Sauvatin",
+        "description": "Monikäyttöinen sauvasekoitin, jossa on useita nopeuksia.",
+        "price": 32.99,
+        "image": "images/product10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Salaattikulho",
+        "description": "Iso lasinen salaattikulho tyylikkääseen tarjoiluun.",
+        "price": 11.49,
+        "image": "images/product11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Sitruspuristin",
+        "description": "Käsikäyttöinen sitruspuristin, jossa säiliö mehulle.",
+        "price": 7.49,
+        "image": "images/product12.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Vispilä",
+        "description": "Kestävä vispilä ruostumattomasta teräksestä.",
+        "price": 3.99,
+        "image": "images/product13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Juomapullo",
+        "description": "500 ml BPA-vapaa juomapullo.",
+        "price": 5.49,
+        "image": "images/product14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Termospullo",
+        "description": "1 litran termospullo lämpimille ja kylmille juomille.",
+        "price": 22.49,
+        "image": "images/product15.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Kuorimaveitsi",
+        "description": "Ergonominen kuorimaveitsi vihannesten ja hedelmien käsittelyyn.",
+        "price": 4.99,
+        "image": "images/product16.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Mittalusikat",
+        "description": "Setti neljästä mittalusikasta tarkkaan leivontaan.",
+        "price": 6.49,
+        "image": "images/product17.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Keittiösakset",
+        "description": "Monikäyttöiset keittiösakset ruostumattomasta teräksestä.",
+        "price": 9.99,
+        "image": "images/product18.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Juustohöylä",
+        "description": "Ruostumaton juustohöylä pehmeille ja koville juustoille.",
+        "price": 5.99,
+        "image": "images/product19.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Kananmunaleikkuri",
+        "description": "Helppokäyttöinen kananmunaleikkuri, jossa terävät terät.",
+        "price": 4.49,
+        "image": "images/product20.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Pullasuti",
+        "description": "Silikoninen pullasuti leivonnaisille ja marinadeille.",
+        "price": 2.99,
+        "image": "images/product21.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Leivontakulho",
+        "description": "Iso leivontakulho kestävästä muovista.",
+        "price": 6.99,
+        "image": "images/product22.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Keittiöliina",
+        "description": "Kestävä puuvillainen keittiöliina siivoukseen ja kuivaamiseen.",
+        "price": 3.49,
+        "image": "images/product23.jpg"
+    },
+    {
+        "id": 247455,
+        "name": "Pannunalunen",
+        "description": "Korkista valmistettu pannunalunen, kestää korkeita lämpötiloja.",
+        "price": 5.99,
+        "image": "images/product24.jpg"
+    },
+    {
+        "id": 253549,
+        "name": "Leikkuuveitsi",
+        "description": "Ammattimainen leikkuuveitsi hedelmille ja vihanneksille.",
+        "price": 18.99,
+        "image": "images/product25.jpg"
+    },
+    {
+        "id": 267913,
+        "name": "Vispilä",
+        "description": "Vispilä, joka on suunniteltu kermavaahdon tekoon.",
+        "price": 3.99,
+        "image": "images/product26.jpg"
+    },
+    {
+        "id": 273197,
+        "name": "Piparkakkumuotit",
+        "description": "Kolmen erimuotoisen piparkakkumuotin setti.",
+        "price": 3.49,
+        "image": "images/product27.jpg"
+    },
+    {
+        "id": 281648,
+        "name": "Tiskiharja",
+        "description": "Pitkäikäinen tiskiharja vaihdettavalla päällä.",
+        "price": 2.99,
+        "image": "images/product28.jpg"
+    },
+    {
+        "id": 297861,
+        "name": "Siivilä",
+        "description": "Pieni siivilä mausteiden ja jauhojen siivilöintiin.",
+        "price": 4.49,
+        "image": "images/product29.jpg"
+    },
+    {
+        "id": 301546,
+        "name": "Patakintaat",
+        "description": "Lämpöeristetyt patakintaat kuumien kattiloiden käsittelyyn.",
+        "price": 8.49,
+        "image": "images/product30.jpg"
+    },
+    {
+        "id": 312323,
+        "name": "Älykello",
+        "description": "Monipuolinen älykello, joka seuraa aktiivisuutta, unta ja sykettä.",
+        "price": 79.99,
+        "image": "images/product31.jpg"
+    },
+    {
+        "id": 324545,
+        "name": "Langattomat kuulokkeet",
+        "description": "Bluetooth-kuulokkeet aktiivisella melunvaimennuksella.",
+        "price": 119.99,
+        "image": "images/product32.jpg"
+    },
+    {
+        "id": 337875,
+        "name": "Kannettava kaiutin",
+        "description": "Vedenkestävä Bluetooth-kaiutin, joka tarjoaa 10 tuntia toistoaikaa.",
+        "price": 49.99,
+        "image": "images/product33.jpg"
+    },
+    {
+        "id": 344545,
+        "name": "Tabletti",
+        "description": "Kevyt ja nopea tabletti 10,5 tuuman näytöllä.",
+        "price": 229.99,
+        "image": "images/product34.jpg"
+    },
+    {
+        "id": 357871,
+        "name": "Webkamera",
+        "description": "HD-webkamera automaattisella tarkennuksella ja mikrofoni.",
+        "price": 39.99,
+        "image": "images/product35.jpg"
+    },
+    {
+        "id": 364545,
+        "name": "Powerbank",
+        "description": "10,000mAh varavirtalähde USB-C- ja USB-A-portilla.",
+        "price": 24.99,
+        "image": "images/product36.jpg"
+    },
+    {
+        "id": 374556,
+        "name": "Sähköhammasharja",
+        "description": "Ladattava sähköhammasharja, jossa on kaksi harjaustilaa.",
+        "price": 49.99,
+        "image": "images/product37.jpg"
+    },
+    {
+        "id": 385485,
+        "name": "Robottilakaisin",
+        "description": "Älykäs robotti-imuri, joka suunnittelee reitin automaattisesti.",
+        "price": 189.99,
+        "image": "images/product38.jpg"
+    },
+    {
+        "id": 394454,
+        "name": "Valvontakamera",
+        "description": "Wi-Fi-yhteensopiva valvontakamera liiketunnistimella.",
+        "price": 69.99,
+        "image": "images/product39.jpg"
+    },
+    {
+        "id": 408558,
+        "name": "Langaton laturi",
+        "description": "Qi-yhteensopiva langaton latausalusta nopeaan lataukseen.",
+        "price": 19.99,
+        "image": "images/product40.jpg"
+    },
+    {
+        "id": 415452,
+        "name": "Äänentoistojärjestelmä",
+        "description": "Kotiteatterijärjestelmä surround-äänellä.",
+        "price": 299.99,
+        "image": "images/product41.jpg"
+    },
+    {
+        "id": 423642,
+        "name": "Pelikonsoli",
+        "description": "Uusin pelikonsoli 4K-resoluutiolla ja VR-valmiudella.",
+        "price": 399.99,
+        "image": "images/product42.jpg"
+    },
+    {
+        "id": 437754,
+        "name": "Drone",
+        "description": "Kamera-drone 4K-kuvauksella ja GPS-seurannalla.",
+        "price": 249.99,
+        "image": "images/product43.jpg"
+    },
+    {
+        "id": 442244,
+        "name": "Smart TV",
+        "description": "50-tuumainen 4K UHD Smart TV sisäänrakennetuilla suoratoistopalveluilla.",
+        "price": 499.99,
+        "image": "images/product44.jpg"
+    },
+    {
+        "id": 457574,
+        "name": "Ilmankostutin",
+        "description": "Ultrasoninen ilmankostutin hiljaisella toiminnolla.",
+        "price": 34.99,
+        "image": "images/product45.jpg"
+    },
+    {
+        "id": 465441,
+        "name": "Älykaiutin",
+        "description": "Ääniohjattava älykaiutin musiikin kuunteluun ja kodin hallintaan.",
+        "price": 59.99,
+        "image": "images/product46.jpg"
+    },
+    {
+        "id": 477777,
+        "name": "Langaton hiiri",
+        "description": "Ergonominen langaton hiiri nopealla yhteydellä.",
+        "price": 14.99,
+        "image": "images/product47.jpg"
+    },
+    {
+        "id": 487422,
+        "name": "Näytönpuhdistussetti",
+        "description": "Näytönpuhdistusaine ja mikrokuituliina kaikille näyttötyypeille.",
+        "price": 7.99,
+        "image": "images/product48.jpg"
+    },
+    {
+        "id": 498764,
+        "name": "Kuulokkeet mikrofonilla",
+        "description": "Langalliset kuulokkeet korkealaatuisella mikrofonilla.",
+        "price": 29.99,
+        "image": "images/product49.jpg"
+    },
+    {
+        "id": 505142,
+        "name": "Älyvalaisin",
+        "description": "Wi-Fi-ohjattava LED-valaisin, jonka väriä ja kirkkautta voi säätää sovelluksella.",
+        "price": 19.99,
+        "image": "images/product50.jpg"
+    },
+    {
+        "id": 516816,
+        "name": "tehokas kannettava tietokone",
+        "description": "",
+        "price": 1119.99,
+        "image": "images/product49.jpg"
+    },    
+    {
+        "id": 521911,
+        "name": "muistitikku 64GB",
+        "description": "",
+        "price": 9.99,
+        "image": "images/product49.jpg"
+    },   
+    {
+        "id": 537034,
+        "name": "tehokas peli pöytätietokone",
+        "description": "",
+        "price": 1459.99,
+        "image": "images/product49.jpg"
+    },    
+    {
+        "id": 547281,
+        "name": "Data-asema 1TB",
+        "description": "",
+        "price": 99.99,
+        "image": "images/product49.jpg"
+    },   
+    {
+        "id": 557450,
+        "name": "Studio Kuulokkeet",
+        "description": "",
+        "price": 229.99,
+        "image": "images/product49.jpg"
+    }
+]
