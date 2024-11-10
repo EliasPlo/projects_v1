@@ -8,6 +8,12 @@ https://medium.com/@gokayburuc/53-project-ideas-from-beginner-to-advanced-progra
 
 https://www.geeksforgeeks.org/java-projects/
 
+https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file
+
+https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file
+
+https://rosettacode.org/wiki/Category:Programming_Tasks
+
 (http://rumkin.com/tools/cipher/)
 
 Text to hex/binary converter
