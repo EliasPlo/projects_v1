@@ -1,0 +1,5 @@
+ Space Invaders -peli
+Idea: Toteuta yksinkertainen versio klassisesta Space Invaders -pelistä, jossa pelaaja taistelee ylhäältä putoavia vihollisia vastaan.
+Vaativuustaso: Keskitaso
+Opi: Liikkeen hallinta, spritejen (pelihahmojen) animaatiot, pisteytys.
+Laajennuksia: Erilaiset vihollistyypit, lisäelämät, power-upit.

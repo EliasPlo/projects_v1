@@ -1,0 +1,46 @@
+1. Suunnittelu
+
+Pelin tyyppi: Onko se kilpa-ajo, pakoonpääsy, tasohyppely, vai joku muu ajopeli?
+
+Pelimaailma: Minkälaista maata/maailmaa peliin luodaan? Kaupunkikadut, vuoristotie, hiekka-alueet?
+
+Ajoneuvot: Millaisia ajoneuvoja peliin tulee? Auto, moottoripyörä, avaruusalus?
+
+Pelihahmo ja tavoitteet: Pelaajan tavoitteet (esim. aikaraja, esteiden väistäminen, kerättävät esineet).
+
+Kontrollit: Miten pelaaja ohjaa ajoneuvoa (esim. nuolinäppäimet, WASD, liukuvasteet)?
+
+2. Työkalujen valinta
+
+
+Pygame (Python): Pygame on loistava valinta, jos haluat tehdä pelin käyttäen Pythonia. Pygame on yksinkertainen ja tarjoaa paljon työkaluja 2D-pelien luomiseen.
+
+3. Graafinen suunnittelu
+
+Kenney.nl: Tarjoaa ilmaisia 2D-spriteja ja pelielementtejä.
+
+OpenGameArt.org: Ilmaisia peligrafiikoita eri tyyleissä.
+
+Voit myös luoda omia grafiikoita esimerkiksi Aseprite-ohjelmalla, joka on loistava 2D-spritejen tekemiseen.
+
+4. Pelin logiikan ja mekaniikan toteuttaminen
+
+Ajoneuvon liikuttaminen: Kirjoita koodi, joka reagoi pelaajan syötteisiin ja liikuttaa ajoneuvoa pelissä.
+Esimerkiksi: nuolinäppäimet liikuttavat ajoneuvoa vasemmalle, oikealle, eteenpäin ja taaksepäin.
+Fysiikka: Peliin voidaan lisätä yksinkertainen fysiikka, kuten kiihtyvyys ja jarrutus.
+Esteet ja reitit: Lisää maali, esteitä, kiinteitä reittejä, ja muuta sisältöä, jotka vaikuttavat pelin kulkuun.
+Kilpailijat tai viholliset (jos peliin kuuluu muita ajoneuvoja): Ohjelmoi tekoäly, joka ohjaa muita ajoneuvoja pelissä.
+5. Pelin testaus ja virheiden korjaaminen
+Testaa peliä usein ja varmista, että kaikki toimii kuten pitäisi. Kiinnitä huomiota:
+
+Pelin sujuvuus: Onko peli tarpeeksi nopeatempoinen ja haasteellinen?
+Liikkeet ja fysiikka: Ovatko ajoneuvojen liikkeet luonnollisia ja hauskoja?
+Virheet ja kaatumiset: Onko peleissä virheitä, jotka estävät pelaamisen?
+6. Äänet ja musiikki
+Lisää pelin tunnelmaa äänitehosteilla ja musiikilla:
+
+Äänitehosteet ajoneuvojen äänistä, törmäyksistä, nopeuden muutoksista.
+Taustamusiikki, joka luo pelille sopivan tunnelman.
+Ilmaisia äänipaketteja voit löytää esimerkiksi freesound.org-sivustolta.
+
+Jos haluat jakaa pelin ystävillesi tai yleisölle, voit ladata sen myös omalle verkkosivustolle.
