@@ -1,0 +1,30 @@
+frontend: React JavaScript
+backend: Node.js, Express, Socket.io
+database: MongoDB
+Autentikaatio: Passport.js + JWT
+
+
+## Sovelluksen suunnittelu ja toiminnallisuudet
+
+Käyttäjien luonti ja hallinta: käyttäjäprofiilit, rekisteröityminen, kirjautuminen
+Sisällön julkaisu: postaukset, (kuvat, videot toimivat niin että pitää laittaa url linkki kuvaan tai videoon)
+Vuorovaikutus: tykkäykset, kommentit,
+Profiilin muokkaus: käyttäjät voivat muokata profiiliaan (profiilikuva, nimi, bio jne.).
+Ilmoitukset: reaaliaikaiset ilmoitukset, kun joku tykkää, kommentoi tai jakaa sisältöä
+Viestintä: yksityisviestit tai ryhmäkeskustelut
+Yksityisyysasetukset: käyttäjät voivat hallita profiilin julkisuutta, päättää, mitkä tiedot näkyvät muille.
+Haku ja suodatus: käyttäjien, sisältöjen, hashtagien hakeminen
+Seuraamisjärjestelmä: mahdollisuus seurata muita käyttäjiä ja nähdä heidän sisältönsä omassa syötteessä.
+Salasanojen salaus: Käytä vahvaa salausmenetelmää (kuten bcrypt) käyttäjäsalasanojen tallentamiseen.
+Sisältösuodattimet: käyttäjät voivat suodattaa syötteensä hashtageilla, sijainnilla tai suosituimmilla julkaisuilla.
+Tekstijulkaisut: käyttäjät voivat luoda tekstipäivityksiä.
+Kuvien ja videoiden jakaminen: käyttäjät voivat lisätä kuvia tai videoita julkaisuihin url linkin avulla.
+Hashtagit ja merkinnät: tukee hashtageja, käyttäjien merkitsemistä sekä näiden sisällön löytämistä.
+Admin-paneeli: jossa adminkäyttäjä voi hallinta käyttäjie postuksai ja julkaisuja eli järjestelmänvalvojat voivat hallita käyttäjiä, moderoida sisältöä ja saada näkyvyyttä sovelluksen tilastoihin.
+
+luo ensiksi kansio/tiedsto rakenne ja anna package.json tiedstoo ja sovellusen luonti komennot jolla voi aloittaa
+
+DA
+https://chatgpt.com/c/6735a793-496c-8012-a16f-e7718e4697e7
+
+
