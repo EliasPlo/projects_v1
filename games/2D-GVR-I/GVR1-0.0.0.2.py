@@ -9,7 +9,7 @@ screen = pygame.display.set_mode((width, height))
 clock = pygame.time.Clock()
 
 # Auton parametrit
-car_image = pygame.image.load("car.png")  # Lisää oma auton kuva
+car_image = pygame.image.load("/car.png")  # Lisää oma auton kuva
 car_rect = car_image.get_rect(center=(width//2, height//2))
 speed = 0
 acceleration = 0.1
