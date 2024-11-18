@@ -1,0 +1,74 @@
+tee 2D auto peli käyttäen pygame
+
+ajopelin ominaisuudet jossa on eri autoja ja eri karttoja 
+ja jossa on myös verkko sivu josta voi ostaa saaduilla pisteillä uusia autoja peliin, peliin 
+kirjatuminen tapahtuu verkkosivulla myös(verkko sivu toteutettu React ja se on render palvelussa), 
+tietokanta on mongoDB
+
+
+Ajopeli, jossa on monipuolisuus ja verkkokauppa, kuulostaa mielenkiintoiselta! Tässä hahmotellaan projektin rakenne ja keskeiset ominaisuudet käyttäen Pygamea, Reactia, MongoDB ja Render-alustaa:
+
+Ominaisuudet:
+  Peli
+  Pelimekaniikat:
+    Autot:
+      Useita autoja, joissa on erilaiset ominaisuudet (nopeus, kiihtyvyys, kääntyvyys, teho, turbo). nittä voi päivttää eri tasoille pisteillä (1-10)
+    Kartat:
+      Useita ratoja, joilla on erilainen vaikeustaso ja ulkoasu.
+    Kilpailutila:
+      Yksinpeli ja moninpeli (voit pelata kavereiden kanssa).
+    Fysiikkamoottori:
+      Pygamen sisäänrakennettu fysiikka realistiseen ajoon.
+    Pisteet ja palkinnot:   
+      Pelaaja kerää pisteitä kilpailemalla ja voittamalla.
+      Pisteillä voi ostaa uusia autoja verkkosivulta.
+    Auton valinta ja kartan valinta:
+      Pelissä pelaaja voi valita ostamansa auton ja haluamansa radan.
+
+Verkkosivusto (React):
+  Käyttäjänhallinta:
+    Kirjautuminen/rekisteröityminen:
+    Käyttäjä luo tilin tai kirjautuu sisään.
+    JWT (JSON Web Token) tai OAuth-toteutus.
+
+    Autokauppa:
+    Näyttää kaikki autot, joita pelaaja voi ostaa.
+    Sisältää auton ominaisuuksien esikatselun.
+    Pisteet synkronoidaan pelin ja tietokannan välillä.
+
+    Profiilin hallinta:
+    Näytä käyttäjän ostamat autot ja kerätyt pisteet.
+
+Tietokanta (MongoDB)
+  Käyttäjädata:
+  Käyttäjän nimi, sähköposti, kirjautumistiedot.
+  Kerätyt pisteet ja ostetut autot.
+
+  Autotiedot:
+  Autojen ominaisuudet ja hinnat.
+
+  Kisahistoria:
+  Tallentaa käyttäjän kilpailemat radat ja tulokset.
+
+Projektin rakenne
+
+  Backend:
+    Teknologia: Node.js + Express.js
+    RESTful-API, joka yhdistää React-sivuston ja MongoDB-tietokannan.
+    API pääkohdat:
+    Käyttäjänhallinta (kirjautuminen, rekisteröinti).
+    Autotietojen ja käyttäjätietojen hallinta.
+    Pisteiden päivitys kisojen jälkeen.
+  Frontend (React):
+    Käyttöliittymä kaupan, kirjautumisen ja profiilin hallintaan.
+    API-kutsut tietokantaan (autojen ostaminen, tietojen synkronointi).
+  Peli (Pygame):
+    Tiedonsiirto:
+    Pelin alussa haetaan käyttäjätiedot ja ostetut autot API
+    kautta.
+    Toiminta:
+    Kilpailujen lopuksi pisteet päivitetään tietokantaan API
+    kautta.
+
+
+anna toimiva kansio-/tiedostorakenne
