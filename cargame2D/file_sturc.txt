@@ -1,0 +1,136 @@
+
+projektin-juurikansio/
+├── peli/                         # Pygame-ajopeli
+│   ├── assets/                   # Mediatiedostot (kuvat, äänet)
+│   │   ├── cars/                 # Autojen kuvat
+│   │   │   ├── car_sport_red.png       # Urheiluauto, punainen väri.
+│   │   │   ├── car_truck_red.png      # Lava-auto, punainen väri.
+│   │   │   ├── car_sedan_red.png     # Perhesedan, punainen väri.
+│   │   │   ├── car_race_red.png      # Kilpa-auto, punainen väri.
+│   │   │   ├── car_offroad_red.png      # 
+│   │   │   ├── car_muscle_red.png      # 
+│   │   │   ├── car_electric_red.png      # 
+│   │   │   ├── car_convertible_red.png      # 
+│   │   │   ├── car_luxury_red.png      # 
+│   │   │   ├── car_sport_green.png       # Urheiluauto, vihreä väri.
+│   │   │   ├── car_truck_green.png      # Lava-auto, vihreä väri.
+│   │   │   ├── car_sedan_green.png     # Perhesedan, vihreä väri.
+│   │   │   ├── car_race_green.png      # Kilpa-auto, vihreä väri.
+│   │   │   ├── car_offroad_green.png      # 
+│   │   │   ├── car_muscle_green.png      # 
+│   │   │   ├── car_electric_green.png      # 
+│   │   │   ├── car_convertible_green.png      # 
+│   │   │   ├── car_luxury_green.png      # 
+│   │   │   ├── car_sport_black.png       # Urheiluauto, musta väri.
+│   │   │   ├── car_truck_black.png      # Lava-auto, musta väri.
+│   │   │   ├── car_sedan_black.png     # Perhesedan, musta väri.
+│   │   │   ├── car_race_black.png      # Kilpa-auto, musta väri.
+│   │   │   ├── car_offroad_black.png      # 
+│   │   │   ├── car_muscle_black.png      # 
+│   │   │   ├── car_electric_black.png      # 
+│   │   │   ├── car_convertible_black.png      # 
+│   │   │   ├── car_luxury_black.png      # 
+│   │   │   ├── car_sport_blue.png       # Urheiluauto, sininen väri.
+│   │   │   ├── car_truck_blue.png      # Lava-auto, sininen väri.
+│   │   │   ├── car_sedan_blue.png     # Perhesedan, sininen väri.
+│   │   │   ├── car_race_blue.png      # Kilpa-auto, sininen väri.
+│   │   │   ├── car_offroad_blue.png      # 
+│   │   │   ├── car_muscle_blue.png      # 
+│   │   │   ├── car_electric_blue.png      # 
+│   │   │   ├── car_convertible_blue.png      # 
+│   │   │   ├── car_luxury_blue.png      # 
+│   │   │   ├── car_sport_yellow.png       # Urheiluauto, sininen väri.
+│   │   │   ├── car_truck_yellow.png      # Lava-auto, sininen väri.
+│   │   │   ├── car_sedan_yellow.png     # Perhesedan, sininen väri.
+│   │   │   ├── car_race_blue.png      # Kilpa-auto, sininen väri.
+│   │   │   ├── car_offroad_yellow.png      # 
+│   │   │   ├── car_muscle_yellow.png      # 
+│   │   │   ├── car_electric_yellow.png      # 
+│   │   │   ├── car_convertible_yellow.png      # 
+│   │   │   ├── car_luxury_yellow.png      # 
+│   │   │   ├── car_firetruck_red.png      # 
+│   │   │   ├── car_police_blue_white.png      # 
+│   │   │   ├── car_taxi_yellow.png      # 
+│   │   │   ├── car_ambulance_white_red.png      # 
+│   │   │   ├── car_monster_orange.png      # 
+│   │   │   ├── car_shopping_cart.png      # 
+│   │   │   ├── car_military_green.png      # 
+│   │   │   ├── car_garbage_green.png      # 
+│   │   │   ├── car_futuristic_silver.png      # 
+│   │   │   ├── car_sports_classic_blue.png      # 
+│   │   │   ├── car_dragster_red.png      # 
+│   │   │   ├── car_delivery_van_white.png      # 
+│   │   │   ├── car_armored_black.png      # 
+│   │   │   └── car_formula_white.png   # formula auto
+│   │   ├── tracks/               # Ratojen kuvat
+│   │   │   ├── track_city_street.png
+│   │   │   ├── track_sand_dunes.png
+│   │   │   ├── track_mountain_climb.png
+│   │   │   ├── track_forest_trail.png
+│   │   │   ├── track_race_circuit.png
+│   │   │   ├── track_speed_highway.png
+│   │   │   ├── track_urban_construction.png
+│   │   │   ├── track_construction.png
+│   │   │   ├── track_snow_valley1.png
+│   │   │   ├── track_hidden_valley.png
+│   │   │   ├── track_windy_hills.png
+│   │   │   ├── track_night_city.png
+│   │   │   ├── track_abandoned_factory.png
+│   │   │   └── track_canyon_rush.png
+│   │   └── sounds/               # Äänitehosteet
+│   │       ├── start.mp3       # musiikki joka kuuluu kun pelikännynnistyy
+│   │       ├── defeat.mp3      # häviö musiikki
+│   │       ├── victory.mp3     # voitto musiikki
+│   │       ├── menu.mp3        # valikko musiikki
+│   │       └── background.mp3  # tausta musiikki         
+│   ├── game/                     # Pelin logiikka
+│   │   ├── __init__.py           # Alustus
+│   │   ├── main.py               # Pelin pääskripti
+│   │   ├── car.py                # Autojen käsittely
+│   │   ├── track.py              # Ratojen käsittely
+│   │   ├── physics.py            # Pelin fysiikkamoottori
+│   │   ├── multiplayer.py        # Moninpelin hallinta
+│   │   ├── ui.py                 # Käyttöliittymä
+│   └── config.py                 # Konfiguraatio (API-osoite, käyttäjätiedot jne.)
+│
+├── verkkosivusto/                # React-verkkosovellus
+│   ├── public/                   # Julkiset tiedostot
+│   │   └── index.html            # HTML-pohja
+│   ├── src/                      # React-koodi
+│   │   ├── components/           # UI-komponentit
+│   │   │   ├── Auth/             # Kirjautumis- ja rekisteröintikomponentit
+│   │   │   ├── Shop/             # Kauppakomponentit
+│   │   │   └── Profile/          # Profiilikomponentit
+│   │   ├── pages/                # Sovelluksen pääsivut
+│   │   │   ├── Login.js          # Kirjautumissivu
+│   │   │   ├── Register.js       # Rekisteröintisivu
+│   │   │   ├── Shop.js           # Kauppasivu
+│   │   │   └── Profile.js        # Profiilisivu
+│   │   ├── utils/                # Apufunktiot (esim. API-kutsut)
+│   │   │   └── api.js            # API-pyyntöjen hallinta
+│   │   ├── App.js                # Sovelluksen juuri
+│   │   └── index.js              # React-sovelluksen sisääntulopiste
+│   └── package.json              # React-projektin riippuvuudet
+│
+├── backend/                      # Backend-palvelin
+│   ├── routes/                   # API-reitit
+│   │   ├── auth.js               # Kirjautumisen ja rekisteröinnin API
+│   │   ├── user.js               # Käyttäjätiedot
+│   │   └── shop.js               # Kaupan toiminnallisuus
+│   ├── models/                   # MongoDB-skeemat
+│   │   ├── User.js               # Käyttäjädata
+│   │   ├── Car.js                # Autodata
+│   │   └── Track.js              # Rata-data
+│   ├── controllers/              # Liiketoimintalogiikka
+│   │   ├── authController.js     # Kirjautumisen hallinta
+│   │   ├── userController.js     # Käyttäjälogiikka
+│   │   └── shopController.js     # Kauppalogiikka
+│   ├── config/                   # Konfiguraatiotiedostot
+│   │   └── db.js                 # MongoDB-yhteys
+│   ├── app.js                    # Express-sovelluksen juuri
+│   ├── server.js                 # Palvelimen sisääntulopiste
+│   └── package.json              # Backend-projektin riippuvuudet
+│
+├── README.md                     # Projektin dokumentaatio
+├── .gitignore                    # Git-ignorointitiedosto
+└── docker-compose.yml            # Docker-palvelujen määrittely (esim. MongoDB)

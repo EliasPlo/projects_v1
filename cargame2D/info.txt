@@ -1,0 +1,125 @@
+
+
+Ominaisuudet:
+  Peli
+  Pelimekaniikat:
+    Autot:
+      Useita autoja, joissa on erilaiset ominaisuudet (nopeus, kiihtyvyys, kääntyvyys, teho, turbo). nittä voi päivttää eri tasoille pisteillä (1-10)
+    Kartat:
+      Useita ratoja, joilla on erilainen vaikeustaso ja ulkoasu.
+    Kilpailutila:
+      Yksinpeli ja moninpeli (voit pelata kavereiden kanssa).
+    Fysiikkamoottori:
+      Pygamen sisäänrakennettu fysiikka realistiseen ajoon.
+    Pisteet ja palkinnot:   
+      Pelaaja kerää pisteitä kilpailemalla ja voittamalla.
+      Pisteillä voi ostaa uusia autoja verkkosivulta.
+    Auton valinta ja kartan valinta:
+      Pelissä pelaaja voi valita ostamansa auton(ostetaan verkkosivulta) ja haluamansa radan.
+
+kansion /tracks kuvankoot
+- 512x512
+- 1920x1080
+- 2000x2000
+- 
+
+kansion /cars kuvankoot
+- 32x64 (kuva)
+- 128x256 (FullHD game or bigger)
+- 64x128 (720p games)
+
+nopeus: 30-860 (km/h) 
+    - Jokainen päivitys lisää 5-30 % riippuen auton tyypistä ja pelaajan tasosta.
+kiihtyvyys: 1,5-45,5 (sec) (pienempi on parempi)
+    - Jokainen päivitys vähentää aikaa 0.1–0.5 sekuntia (pienempi on parempi).
+kääntyvyys: 30–90 (turn)
+    - Jokainen päivitys lisää 5–10 yksikköä (korkeampi on parempi).
+teho: 10-6000 (hp)
+    - Jokainen päivitys lisää 25–400 HP, riipuu autosta (korkeampi on parempi)
+turbo: 1-10
+    - Jokainen päivitys nostaa arvoa 0,1-1 yksiköä riippuen autosta (korkeampi on parempi).
+    - arvo voi olla desimaali arvo
+
+ → (maks. )
+
+kuvat yleiset autot:
+car_sport_[color].png : nopeus: 150 km/h → (maks. 3800 km/h), kiihtyvyys: 6,0s → (maks. 2,5s), kääntyvyys: 70 → (maks. 80), teho: 300hp → (maks. 1600), turbo: 3 → (maks. 7)     
+car_truck_[color].png : nopeus: 80km/h → (maks. 200km/h ), kiihtyvyys: 15,0s → (maks. 9,0s), kääntyvyys: 40 → (maks. 55), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5)  
+car_sedan_[color].png : nopeus: 100km/h → (maks. 240km/h ), kiihtyvyys: 10,0s → (maks. 6,5s), kääntyvyys: 50 → (maks. 70), teho: 200hp  → (maks. 800hp ), turbo: 2 → (maks. 4) 
+car_race_[color].png : nopeus: 200km/h → (maks. 690km/h ), kiihtyvyys: 4,5s → (maks. 1,5s), kääntyvyys: 80 → (maks. 90), teho: 1000hp  → (maks. 3100hp ), turbo: 5 → (maks. 10)
+car_offroad_[color].png : nopeus: 70km/h → (maks. 200km/h ), kiihtyvyys: 12,0s → (maks. 7,5s), kääntyvyys: 50 → (maks. 70), teho: 400hp  → (maks. 1600hp ), turbo: 3 → (maks. 5) 
+car_muscle_[color].png : nopeus: 140km/h → (maks. 320km/h ), kiihtyvyys: 7,0s → (maks. 3,0s), kääntyvyys: 50 → (maks. 70), teho: 500hp  → (maks. 2400hp ), turbo: 3 → (maks. 8)  
+car_electric_[color].png : nopeus: 120km/h → (maks. 400km/h ), kiihtyvyys: 5,0s → (maks. 2,0s), kääntyvyys: 75 → (maks. 90), teho: 300hp  → (maks. 2000hp ), turbo: 4 → (maks. 8) 
+car_convertible_[color].png :  nopeus: 130km/h → (maks. 300km/h ), kiihtyvyys: 7,5s → (maks. 3,5s), kääntyvyys: 65 → (maks. 80), teho: 250hp  → (maks. 1200hp ), turbo: 3 → (maks. 6)   
+
+car_luxury_[color].png :  nopeus: 110km/h → (maks. 280km/h ), kiihtyvyys: 9,0 s → (maks. 5,0s), kääntyvyys: 60 → (maks. 80), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5)     
+
+kuvat special autot:
+car_firetruck_red.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
+car_police_blue_white.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
+car_taxi_yellow.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
+car_ambulance_white_red.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )   
+car_monster_orange.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
+car_shopping_cart.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
+car_military_green.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
+car_garbage_green.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
+car_futuristic_silver.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )     
+car_sports_classic_blue.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
+car_dragster_red.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
+car_delivery_van_white.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
+car_armored_black.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
+car_formula_white.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )     
+
+Päivitysten kustannukset ja eteneminen
+Päivitykset voivat olla progressiivisesti kalliimpia, jotta pelaaja tuntee saavuttavansa jotain. 
+
+Esimerkiksi: (suluissa on mikä päivittyy)
+taso1: 1-1200000 pistettä (oletuksena on niin että kun auton ostaa niin se on tasolla 1 ) 
+taso2: 200 pistettä (nopeus, teho)
+taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+taso4: 800 pistettä (teho, turbo)
+taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+taso6: 3200 pistettä (kääntyvyys)
+taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+taso8: 12800 pistettä (kiihtyvyys, turbo)
+taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+
+[color]: paikalla on kansiossa (red, green, black, blue, yellow)
+
+eri autot maksavat eri verran kaupassa:
+yleiset autot
+car_sport : 
+car_truck : 
+car_sedan : 
+car_race  : 
+car_offroad : 
+car_muscle : 
+car_electric : 
+car_convertible : 
+car_luxury :  
+
+special autot
+car_firetruck_red : 
+car_police_blue_white : 
+car_taxi_yellow : 
+car_ambulance_white_red : 
+car_monster_orange  : 
+car_shopping_cart : 
+car_military_green  : 
+car_garbage_green : 
+car_futuristic_silver : 
+car_sports_classic_blue : 
+car_dragster_red  : 
+car_delivery_van_white : 
+car_armored_black : 
+car_formula_white : 
+
+Pelimekaniikan tasapaino
+Kompromissit:
+
+Teho ja nopeus voivat tehdä autosta nopean, mutta vähentää kääntyvyyttä.
+Korkea turbo lisää nopeuspiikkejä, mutta voi vaikeuttaa auton hallintaa.
+Strateginen päivittäminen:
+
+Pelaaja voi keskittyä parantamaan tiettyä ominaisuutta (esim. kääntyvyyttä teknisillä radoilla tai nopeutta suorilla).

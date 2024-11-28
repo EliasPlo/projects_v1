@@ -1,0 +1,114 @@
+tee 2D auto peli käyttäen pygame
+
+ajopelin ominaisuudet jossa on eri autoja ja eri karttoja 
+ja jossa on myös verkko sivu josta voi ostaa saaduilla pisteillä uusia autoja peliin, peliin 
+kirjatuminen tapahtuu verkkosivulla myös(verkko sivu toteutettu React ja se on render palvelussa), 
+tietokanta on mongoDB
+
+
+Ajopeli, jossa on monipuolisuus ja verkkokauppa, kuulostaa mielenkiintoiselta! Tässä hahmotellaan projektin rakenne ja keskeiset ominaisuudet käyttäen Pygamea, Reactia, MongoDB ja Render-alustaa:
+
+Ominaisuudet:
+  Peli
+  Pelimekaniikat:
+    Autot:
+      Useita autoja, joissa on erilaiset ominaisuudet (nopeus, kiihtyvyys, kääntyvyys, teho, turbo). nittä voi päivttää eri tasoille pisteillä (1-10)
+    Kartat:
+      Useita ratoja, joilla on erilainen vaikeustaso ja ulkoasu.
+    Kilpailutila:
+      Yksinpeli ja moninpeli (voit pelata kavereiden kanssa).
+    Fysiikkamoottori:
+      Pygamen sisäänrakennettu fysiikka realistiseen ajoon.
+    Pisteet ja palkinnot:   
+      Pelaaja kerää pisteitä kilpailemalla ja voittamalla.
+      Pisteillä voi ostaa uusia autoja verkkosivulta.
+    Auton valinta ja kartan valinta:
+      Pelissä pelaaja voi valita ostamansa auton ja haluamansa radan.
+
+Verkkosivusto (React):
+  Käyttäjänhallinta:
+    Kirjautuminen/rekisteröityminen:
+    Käyttäjä luo tilin tai kirjautuu sisään.
+    JWT (JSON Web Token) tai OAuth-toteutus.
+
+    Autokauppa:
+    Näyttää kaikki autot, joita pelaaja voi ostaa.
+    Sisältää auton ominaisuuksien esikatselun.
+    Pisteet synkronoidaan pelin ja tietokannan välillä.
+
+    Profiilin hallinta:
+    Näytä käyttäjän ostamat autot ja kerätyt pisteet.
+
+Tietokanta (MongoDB)
+  Käyttäjädata:
+  Käyttäjän nimi, sähköposti, kirjautumistiedot.
+  Kerätyt pisteet ja ostetut autot.
+
+  Kisahistoria:
+  Tallentaa käyttäjän kilpailemat radat ja tulokset.
+
+Projektin rakenne
+  Autotiedot:
+  Autojen ominaisuudet ja hinnat.(ovat .json tiedostoissa)
+
+  Backend:
+    Teknologia: Node.js + Express.js
+    RESTful-API, joka yhdistää React-sivuston ja MongoDB-tietokannan.
+    API pääkohdat:
+    Käyttäjänhallinta (kirjautuminen, rekisteröinti).
+    Autotietojen ja käyttäjätietojen hallinta.
+    Pisteiden päivitys kisojen jälkeen.
+  Frontend (React):
+    Käyttöliittymä kaupan, kirjautumisen ja profiilin hallintaan.
+    API-kutsut tietokantaan (autojen ostaminen, tietojen synkronointi).
+  Peli (Pygame):
+    Tiedonsiirto:
+    Pelin alussa haetaan käyttäjätiedot ja ostetut autot API
+    kautta.
+    Toiminta:
+    Kilpailujen lopuksi pisteet päivitetään tietokantaan API
+    kautta.
+
+
+anna toimiva kansio-/tiedostorakenne
+
+kansion /tracks kuvankoot
+- 512x512
+- 1920x1080
+- 2000x2000
+- 
+
+kansion /cars kuvankoot
+- 32x64 (kuva)
+- 128x256 (FullHD game or bigger)
+- 64x128 (720p games)
+
+DA
+https://chatgpt.com/c/673af49d-1818-8012-abab-27a914925f74
+https://chatgpt.com/c/673ae589-6220-8012-933f-7c5d25480912
+
+car_sport_[color].png      
+car_truck_[color].png      
+car_sedan_[color].png     
+car_race_[color].png      
+car_offroad_[color].png    
+car_muscle_[color].png     
+car_electric_[color].png   
+car_convertible_[color].png
+car_luxury_[color].png   
+
+car_firetruck_red.png      
+car_police_blue_white.png  
+car_taxi_yellow.png       
+car_ambulance_white_red.png
+car_monster_orange.png     
+car_shopping_cart.png      
+car_military_green.png     
+car_garbage_green.png      
+car_futuristic_silver.png  
+car_sports_classic_blue.png
+car_dragster_red.png      
+car_delivery_van_white.png 
+car_armored_black.png      
+car_formula_white.png   
+
