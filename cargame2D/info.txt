@@ -1,5 +1,3 @@
-
-
 Ominaisuudet:
   Peli
   Pelimekaniikat:
@@ -43,83 +41,389 @@ turbo: 1-10
  → (maks. )
 
 kuvat yleiset autot:
-car_sport_[color].png : nopeus: 150 km/h → (maks. 3800 km/h), kiihtyvyys: 6,0s → (maks. 2,5s), kääntyvyys: 70 → (maks. 80), teho: 300hp → (maks. 1600), turbo: 3 → (maks. 7)     
-car_truck_[color].png : nopeus: 80km/h → (maks. 200km/h ), kiihtyvyys: 15,0s → (maks. 9,0s), kääntyvyys: 40 → (maks. 55), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5)  
-car_sedan_[color].png : nopeus: 100km/h → (maks. 240km/h ), kiihtyvyys: 10,0s → (maks. 6,5s), kääntyvyys: 50 → (maks. 70), teho: 200hp  → (maks. 800hp ), turbo: 2 → (maks. 4) 
+car_sport_[color].png : nopeus: 150 km/h → (maks. 3800 km/h), kiihtyvyys: 6,0s → (maks. 2,5s), kääntyvyys: 70 → (maks. 80), teho: 300hp → (maks. 1600), turbo: 3 → (maks. 7)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1000 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 1500 pistettä (kääntyvyys)
+  taso7: 3000 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 4000 pistettä (kiihtyvyys, turbo)
+  taso9: 4500 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 5000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_truck_[color].png : nopeus: 80km/h → (maks. 200km/h ), kiihtyvyys: 15,0s → (maks. 9,0s), kääntyvyys: 40 → (maks. 55), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 400 pistettä (nopeus, teho)
+  taso3: 450 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 2000 pistettä (kääntyvyys)
+  taso7: 2800 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 3100 pistettä (kiihtyvyys, turbo)
+  taso9: 3600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 4000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_sedan_[color].png : nopeus: 100km/h → (maks. 240km/h ), kiihtyvyys: 10,0s → (maks. 6,5s), kääntyvyys: 50 → (maks. 70), teho: 200hp  → (maks. 800hp ), turbo: 2 → (maks. 4)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 300 pistettä (nopeus, teho)
+  taso3: 650 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1350 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 1700 pistettä (kääntyvyys)
+  taso7: 2050 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 2750 pistettä (kiihtyvyys, turbo)
+  taso9: 3100 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 3550 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
 car_race_[color].png : nopeus: 200km/h → (maks. 690km/h ), kiihtyvyys: 4,5s → (maks. 1,5s), kääntyvyys: 80 → (maks. 90), teho: 1000hp  → (maks. 3100hp ), turbo: 5 → (maks. 10)
-car_offroad_[color].png : nopeus: 70km/h → (maks. 200km/h ), kiihtyvyys: 12,0s → (maks. 7,5s), kääntyvyys: 50 → (maks. 70), teho: 400hp  → (maks. 1600hp ), turbo: 3 → (maks. 5) 
-car_muscle_[color].png : nopeus: 140km/h → (maks. 320km/h ), kiihtyvyys: 7,0s → (maks. 3,0s), kääntyvyys: 50 → (maks. 70), teho: 500hp  → (maks. 2400hp ), turbo: 3 → (maks. 8)  
-car_electric_[color].png : nopeus: 120km/h → (maks. 400km/h ), kiihtyvyys: 5,0s → (maks. 2,0s), kääntyvyys: 75 → (maks. 90), teho: 300hp  → (maks. 2000hp ), turbo: 4 → (maks. 8) 
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_offroad_[color].png : nopeus: 70km/h → (maks. 200km/h ), kiihtyvyys: 12,0s → (maks. 7,5s), kääntyvyys: 50 → (maks. 70), teho: 400hp  → (maks. 1600hp ), turbo: 3 → (maks. 5)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_muscle_[color].png : nopeus: 140km/h → (maks. 320km/h ), kiihtyvyys: 7,0s → (maks. 3,0s), kääntyvyys: 50 → (maks. 70), teho: 500hp  → (maks. 2400hp ), turbo: 3 → (maks. 8)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_electric_[color].png : nopeus: 120km/h → (maks. 400km/h ), kiihtyvyys: 5,0s → (maks. 2,0s), kääntyvyys: 75 → (maks. 90), teho: 300hp  → (maks. 2000hp ), turbo: 4 → (maks. 8)
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
 car_convertible_[color].png :  nopeus: 130km/h → (maks. 300km/h ), kiihtyvyys: 7,5s → (maks. 3,5s), kääntyvyys: 65 → (maks. 80), teho: 250hp  → (maks. 1200hp ), turbo: 3 → (maks. 6)   
-
-car_luxury_[color].png :  nopeus: 110km/h → (maks. 280km/h ), kiihtyvyys: 9,0 s → (maks. 5,0s), kääntyvyys: 60 → (maks. 80), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5)     
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_luxury_[color].png :  nopeus: 110km/h → (maks. 280km/h ), kiihtyvyys: 9,0 s → (maks. 5,0s), kääntyvyys: 60 → (maks. 80), teho: 400hp  → (maks. 1400hp ), turbo: 2 → (maks. 5) 
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
 
 kuvat special autot:
-car_firetruck_red.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
-car_police_blue_white.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
-car_taxi_yellow.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
-car_ambulance_white_red.png :  nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )   
-car_monster_orange.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
-car_shopping_cart.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
-car_military_green.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )        
-car_garbage_green.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
-car_futuristic_silver.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )     
-car_sports_classic_blue.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
-car_dragster_red.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
-car_delivery_van_white.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )    
-car_armored_black.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )         
-car_formula_white.png : nopeus: → (maks. ), kiihtyvyys:  → (maks. ), kääntyvyys:  → (maks. ), teho:  → (maks. ), turbo:  → (maks. )     
-
-Päivitysten kustannukset ja eteneminen
-Päivitykset voivat olla progressiivisesti kalliimpia, jotta pelaaja tuntee saavuttavansa jotain. 
-
-Esimerkiksi: (suluissa on mikä päivittyy)
-taso1: 1-1200000 pistettä (oletuksena on niin että kun auton ostaa niin se on tasolla 1 ) 
-taso2: 200 pistettä (nopeus, teho)
-taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
-taso4: 800 pistettä (teho, turbo)
-taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
-taso6: 3200 pistettä (kääntyvyys)
-taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
-taso8: 12800 pistettä (kiihtyvyys, turbo)
-taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
-taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_firetruck_red.png :  nopeus: 60km/h → (maks. 150km/h), kiihtyvyys: 20,0s → (maks. 10,0s), kääntyvyys: 40 → (maks. 55), teho: 300hp → (maks. 800hp), turbo: 1 → (maks. 3) 
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_police_blue_white.png :  nopeus: 160km/h → (maks. 360km/h), kiihtyvyys: 6,0s → (maks. 2,5s), kääntyvyys: 70 → (maks. 85), teho: 400hp → (maks. 1800hp), turbo: 4 → (maks. 7) 
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_taxi_yellow.png :  nopeus: 100km/h → (maks. 260km/h), kiihtyvyys: 12,0s → (maks. 7,0s), kääntyvyys: 50 → (maks. 70), teho: 200hp → (maks. 900hp), turbo: 2 → (maks. 5)        
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_ambulance_white_red.png : nopeus: 130km/h → (maks. 300km/h), kiihtyvyys: 8.0s → (maks. 4.0s), kääntyvyys: 60 → (maks. 75), teho: 400hp → (maks. 1200hp), turbo: 3 → (maks. 6)  
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_monster_orange.png : nopeus: 80km/h → (maks. 220km/h), kiihtyvyys: 15.0s → (maks. 8.0s), kääntyvyys: 45 → (maks. 65), teho: hp → (maks. hp), turbo: 2 → (maks. 5) 
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_shopping_cart.png : nopeus: 30km/h → (maks. 100km/h), kiihtyvyys: 45.0s → (maks. 20.0s), kääntyvyys: 30 → (maks. 50), teho: hp → (maks. hp), turbo: 1 → (maks. 2)    
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_military_green.png : nopeus: 90km/h → (maks. 250km/h), kiihtyvyys: 12.0s → (maks. 7.0s), kääntyvyys: 40 → (maks. 60), teho: 500hp → (maks. 2000hp), turbo: 2 → (maks. 5)        
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_garbage_truck_green.png : nopeus: 60km/h → (maks. 180km/h), kiihtyvyys: 25,0s → (maks. 10.0s), kääntyvyys: 35 → (maks. 50), teho: 200hp → (maks. 800hp), turbo:1  → (maks. 3)         
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_futuristic_silver.png : nopeus: 250km/h → (maks. 360km/h), kiihtyvyys: 3.0s → (maks. 1,5s), kääntyvyys: 80 → (maks. 90), teho: 1200hp → (maks. 6000hp), turbo:  → (maks. )     
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_sports_classic_blue.png : nopeus: 150km/h → (maks. 320km/h), kiihtyvyys: 6.0s → (maks. 3,0s), kääntyvyys: 60 → (maks. 75), teho: 400hp → (maks. 2400hp), turbo: 3 → (maks. 7)    
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_dragster_red.png : nopeus: 300km/h → (maks. 860km/h), kiihtyvyys: 3,5s → (maks. 1,8s), kääntyvyys: 30 → (maks. 45), teho: 1200hp → (maks. 6000hp), turbo: 5 → (maks. 10)         
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_delivery_van_white.png : nopeus: 70km/h → (maks. 220km/h), kiihtyvyys: 18.0s → (maks. 9.0s), kääntyvyys: 35 → (maks. 50), teho: 150hp → (maks. 800hp), turbo: 1 → (maks. 4)    
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_armored_black.png : nopeus: 100km/h → (maks. 250km/h), kiihtyvyys: 20.0s → (maks. 8.0s), kääntyvyys: 40 → (maks. 60), teho: 800hp → (maks. 3000hp), turbo: 2 → (maks. 6)         
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+   taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
+car_formula_red.png : nopeus: 220km/h → (maks. 695km/h), kiihtyvyys: 4,0s → (maks. 1,5s), kääntyvyys: 85 → (maks. 90), teho: 1400hp → (maks. 3000hp), turbo: 6 → (maks. 10)     
+Hinta kaupassa: 
+Päivitys kustannukset: (suluissa on mikä päivittyy)
+  taso1: 100 pistettä (nopeus, kiihtyvyys, teho, kääntyvyys)
+  taso2: 200 pistettä (nopeus, teho)
+  taso3: 400 pistettä (kiihtyvyys, kääntyvyys,  turbo)
+  taso4: 800 pistettä (teho, turbo)
+  taso5: 1600 pistettä (nopeus, kiihtyvyys, turbo)
+  taso6: 3200 pistettä (kääntyvyys)
+  taso7: 6400 pistettä (nopeus, kiihtyvyys, teho)
+  taso8: 12800 pistettä (kiihtyvyys, turbo)
+  taso9: 25600 pistettä (nopeus, kääntyvyys, teho)
+  taso10: 70000 pistettä (nopeus, kiihtyvyys, kääntyvyys, teho, turbo)
 
 [color]: paikalla on kansiossa (red, green, black, blue, yellow)
 
-eri autot maksavat eri verran kaupassa:
-yleiset autot
-car_sport : 
-car_truck : 
-car_sedan : 
-car_race  : 
-car_offroad : 
-car_muscle : 
-car_electric : 
-car_convertible : 
-car_luxury :  
-
-special autot
-car_firetruck_red : 
-car_police_blue_white : 
-car_taxi_yellow : 
-car_ambulance_white_red : 
-car_monster_orange  : 
-car_shopping_cart : 
-car_military_green  : 
-car_garbage_green : 
-car_futuristic_silver : 
-car_sports_classic_blue : 
-car_dragster_red  : 
-car_delivery_van_white : 
-car_armored_black : 
-car_formula_white : 
-
 Pelimekaniikan tasapaino
 Kompromissit:
-
 Teho ja nopeus voivat tehdä autosta nopean, mutta vähentää kääntyvyyttä.
 Korkea turbo lisää nopeuspiikkejä, mutta voi vaikeuttaa auton hallintaa.
 Strateginen päivittäminen:
-
 Pelaaja voi keskittyä parantamaan tiettyä ominaisuutta (esim. kääntyvyyttä teknisillä radoilla tai nopeutta suorilla).
+
+Pelimuodot:
+
+Peruskisa(Normal Race)
+
+Kuvaus: Kierroksia suljetulla radalla, ensimmäinen maaliin voittaa.
+Vaikeustaso: Helppo/keskitaso.
+Palkkiot:
+1-sija: 300/500 pistettä
+2-sija: 200/300 pistettä
+3-sija: 100/200 pistettä
+
+Aikakisa(Time Trial)
+
+
+Eliminointikilpailu (Elimination Race)
+
+
+Nopeuskilpailu (Speed Race)
+
+
+Taitorata (Obstacle Course)
+Kuvaus: Rata täynnä esteitä, kuten ramppeja, siltoja ja esteitä, jotka pitää väistää.
+Vaikeustaso: Korkea.
+Palkkiot:
+1-sija: 600 pistettä
+2-sija: 400 pistettä
+3-sija: 300 pistettä
+Osallistuminen: 50 pistettä
+
+Tiimikilpailu (Team Race)
+Kuvaus: Pelaajat jaetaan joukkueisiin, ja joukkueen kokonaissijoitus määrittää pisteet.
+Vaikeustaso: Keskitaso/korkea.
+Palkkiot per joukkueen jäsen:
+1-joukkue: 400 pistettä
+2-joukkue: 300 pistettä
+3-joukkue: 200 pistettä
+
+
+Tiedot:
+- Peruskisa, Aikakisa, Nopeuskilpailu, Taitorata ovat yksinpeli Pelimuodot
+- Tiimikilpailu, Eliminointikilpailu ovat moninpeli pelimuodot
+
+
+Pisteiden ansaintajärjestelmä:
+Vaikeustaso vaikuttaa palkkioihin:
+Vaikeammat kilpailut tarjoavat enemmän pisteitä.
+
+Osallistumispalkinnot:
+Jokainen kilpailu voi tarjota pienen osallistumispalkkion (esim. 50 pistettä) kannustamaan kokeilua.
+
+Kausikilpailut ja tapahtumat:
+Jos peli sisältää kausittaisia tai erityisiä tapahtumia, palkkiot voivat olla suurempia ja sisältää erikoisesineitä tai harvinaisia autoja.
+
+Bonus-pisteet:
+Pelaajat voivat saada lisäpisteitä erityisistä suorituksista, kuten nopeimmasta kierroksesta tai täydellisesti suoritetusta radasta.
+
+Radat:
+track_city_street.png
+Pelimuodot jota voi pelata kartassa:
+
+track_sand_dunes.png
+track_mountain_climb.png
+track_forest_trail.png
+track_race_circuit.png
+track_speed_highway.png
+track_urban_construction.png
+track_construction.png
+track_snow_valley1.png
+track_hidden_valley.png
+track_windy_hills.png
+track_night_city.png
+track_abandoned_factory.png
+track_canyon_rush.png
+
+

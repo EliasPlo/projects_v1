@@ -2,6 +2,21 @@
 projektin-juurikansio/
 ├── peli/                         # Pygame-ajopeli
 │   ├── assets/                   # Mediatiedostot (kuvat, äänet)
+│   │   ├── props/               # Ratojen kuvat
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   └── 
 │   │   ├── cars/                 # Autojen kuvat
 │   │   │   ├── car_sport_red.png       # Urheiluauto, punainen väri.
 │   │   │   ├── car_truck_red.png      # Lava-auto, punainen väri.

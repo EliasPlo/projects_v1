@@ -1,0 +1,30 @@
+eri autot maksavat eri verran kaupassa:
+yleiset autot
+car_sport : 
+car_truck : 
+car_sedan : 
+car_race  : 
+car_offroad : 
+car_muscle : 
+car_electric : 
+car_convertible : 
+car_luxury :  
+
+special autot
+car_firetruck_red : 
+car_police_blue_white : 
+car_taxi_yellow : 
+car_ambulance_white_red : 
+car_monster_orange  : 
+car_shopping_cart : 
+car_military_green  : 
+car_garbage_green : 
+car_futuristic_silver : 
+car_sports_classic_blue : 
+car_dragster_red  : 
+car_delivery_van_white : 
+car_armored_black : 
+car_formula_white : 
+
+Päivitysten kustannukset ja eteneminen
+Päivitykset voivat olla progressiivisesti kalliimpia, jotta pelaaja tuntee saavuttavansa jotain. 
