@@ -1,0 +1,16 @@
+[
+    {
+        "ID": 1,
+        "name": "tuote1",
+        "description": "tuotteen1 kuvaus",
+        "price": 150.95,
+        "category": "eletroniikka",
+        "stock": 150,
+        "name": "",
+        "name": "",
+        "name": "",
+        "supplier": "",
+        "warranty": "",
+        "availability": ""
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+      "accountID": 1,
+      "amount": 5000,
+      "transactions": [
+        {
+          "type": "deposit",
+          "amount": 1000,
+          "date": "2024-01-01"
+        },
+        {
+          "type": "withdraw",
+          "amount": 200,
+          "date": "2024-02-15"
+        }
+      ]
+    }
+]
