@@ -1,0 +1,29 @@
+{
+    "admins": [
+      {
+        "admin_id": "ADM001",
+        "name": "Pekka Pääkäyttäjä",
+        "email": "pekka.paakayttaja@example.com",
+        "phone": "+358501234567",
+        "password": "hashed_password_admin123",
+        "role": "Super Admin",
+        "permissions": ["manage_users", "manage_orders", "view_reports"],
+        "created_date": "2023-05-10T14:30:00Z",
+        "last_login": "2024-12-09T10:15:00Z",
+        "is_active": true
+      },
+      {
+        "admin_id": "ADM002",
+        "name": "Liisa Tuki",
+        "email": "liisa.tuki@example.com",
+        "phone": "+358501987654",
+        "password": "hashed_password_admin456",
+        "role": "Support Admin",
+        "permissions": ["manage_users", "view_orders"],
+        "created_date": "2024-01-15T09:00:00Z",
+        "last_login": "2024-12-08T16:45:00Z",
+        "is_active": true
+      }
+    ]
+  }
+  

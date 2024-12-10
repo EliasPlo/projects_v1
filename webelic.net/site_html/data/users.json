@@ -1,0 +1,20 @@
+{
+    "users": [
+      {
+        "user_id": "USR001",
+        "name": "Matti Meikäläinen",
+        "email": "matti.meikalainen@example.com",
+        "phone": "+358401234567",
+        "password": "hashed_password_123",
+        "address": {
+          "street": "Esimerkkitie 10",
+          "city": "Helsinki",
+          "postal_code": "00100",
+          "country": "FI"
+        },
+        "registered_date": "2024-12-01T12:00:00Z",
+        "last_login": "2024-12-09T18:45:00Z",
+        "is_active": true
+      }
+    ]
+  }

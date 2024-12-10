@@ -17,3 +17,7 @@
  # site_html
 
  https://chatgpt.com/c/6756c188-ccb4-8012-b626-3c74512d963d
+
+
+
+tee minulle kauppa sovellus joka toimii Live Server (html,js, css)

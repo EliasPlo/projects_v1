@@ -1,18 +1,39 @@
-[
+{
+  "payments": [
     {
-      "accountID": 1,
-      "amount": 5000,
-      "transactions": [
-        {
-          "type": "deposit",
-          "amount": 1000,
-          "date": "2024-01-01"
-        },
-        {
-          "type": "withdraw",
-          "amount": 200,
-          "date": "2024-02-15"
+      "payment_id": "PMT123456",
+      "order_id": "ORD987654",
+      "user_id": "USR001",
+      "amount": 129.99,
+      "currency": "EUR",
+      "payment_method": "Credit Card",
+      "status": "completed",
+      "transaction_date": "2024-12-10T14:30:00Z",
+      "payment_gateway": "Stripe",
+      "card_details": {
+        "card_type": "Visa",
+        "last_four": "1234",
+        "expiry_date": "12/2026"
+      },
+      "payer": {
+        "name": "Matti Meikäläinen",
+        "email": "matti.meikalainen@example.com",
+        "address": {
+          "line1": "Esimerkkikatu 1",
+          "line2": "Apt 2",
+          "city": "Helsinki",
+          "postal_code": "00100",
+          "country": "FI"
         }
-      ]
+      },
+      "billing_address": {
+        "name": "Matti Meikäläinen",
+        "street": "Esimerkkitie 10",
+        "city": "Helsinki",
+        "postal_code": "00100",
+        "country": "FI"
+      }
+
     }
-]
+  ]
+}

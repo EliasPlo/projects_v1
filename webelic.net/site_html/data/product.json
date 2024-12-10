@@ -6,11 +6,23 @@
         "price": 150.95,
         "category": "eletroniikka",
         "stock": 150,
-        "name": "",
-        "name": "",
-        "name": "",
-        "supplier": "",
-        "warranty": "",
-        "availability": ""
+        "brand": "ComCam",
+        "rating": 4.5,
+        "reviews": [
+            {
+              "customer": "",
+              "rating": 5,
+              "comment": "!"
+            },
+            {
+              "customer": "",
+              "rating": 4,
+              "comment": ""
+            }
+          ],
+        "date_added": "10-07-2024",
+        "supplier": "Tuonti Oy",
+        "warranty": "2 years",
+        "availability": "instock"
     }
 ]
