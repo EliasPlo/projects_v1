@@ -7,7 +7,7 @@
         "phone": "+358501234567",
         "password": "hashed_password_admin123",
         "role": "Super Admin",
-        "permissions": ["manage_users", "manage_orders", "view_reports"],
+        "permissions": ["manage_users", "manage_orders", "view_reports", "manage_products"],
         "created_date": "2023-05-10T14:30:00Z",
         "last_login": "2024-12-09T10:15:00Z",
         "is_active": true
