@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuvankäsittelysovellus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Verkkosovellus kuvankäsittelyyn</h1>
+
+    <div>
+        <input type="file" id="fileInput" accept="image/*">
+        <input type="text" id="imageName" placeholder="Anna kuvan nimi">
+        <label for="imageWidth">Leveys:</label>
+        <input type="number" id="imageWidth" min="100" max="5000" value="800">
+        <label for="imageHeight">Korkeus:</label>
+        <input type="number" id="imageHeight" min="100" max="5000" value="600">
+        <button id="createNewImageBtn">Aloita uusi kuva</button>
+        <button id="clearCanvasBtn">Tyhjennä</button>
+        <button id="downloadBtn">Lataa kuva</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="tools">
+        <h3>Piirrustustyökalut</h3>
+        <button id="pencilTool">Kynä</button>
+        <button id="brushTool">Pensseli</button>
+        <input type="color" id="colorPicker" value="#000000">
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+    </div>
+
+    <div id="imageTools">
+        <h3>Perusmuokkaus</h3>
+        <button id="contrastBtn">Kontrasti</button>
+        <button id="cropBtn">Rajaa</button>
+        <button id="resizeBtn">Koko</button>
+    </div>
+
+    <div id="textTools">
+        <h3>Tekstin lisääminen</h3>
+        <input type="text" id="textInput" placeholder="Lisää teksti">
+        <button id="addTextBtn">Lisää teksti</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

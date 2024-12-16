@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid black;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tools, #imageTools, #textTools {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+input[type="color"], input[type="number"], input[type="text"], input[type="range"] {
+    margin: 10px;
+}
