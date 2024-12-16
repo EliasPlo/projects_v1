@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pixel Art Editor</h1>
+    <canvas id="pixelCanvas" width="320" height="320"></canvas>
+    
+    <div class="tools">
+        <h2>Choose a Color:</h2>
+        <input type="color" id="colorPicker" value="#000000" onchange="changeColor(this.value)">
+        
+        <h2>Tools:</h2>
+        <button class="tool-button" onclick="setTool('draw')">Draw</button>
+        <button class="tool-button" onclick="setTool('rectangle')">Rectangle</button>
+        <button class="tool-button" onclick="setTool('circle')">Circle</button>
+        <button class="tool-button" onclick="setTool('fill')">Fill</button>
+        <button class="tool-button" onclick="clearCanvas()">Clear</button>
+        <button class="tool-button" onclick="saveCanvas()">Save</button>
+    </div>
+
+    <div class="zoom-controls">
+        <h2>Zoom:</h2>
+        <button class="tool-button" onclick="zoomIn()">Zoom In</button>
+        <button class="tool-button" onclick="zoomOut()">Zoom Out</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
