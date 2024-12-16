@@ -1,17 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kauppa</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Tervetuloa Kauppaan</h1>
+        <input type="text" id="search" placeholder="Hae tuotteita...">
+        <button id="searchBtn">Hae</button>
     </header>
+
     <main>
-        <div id="product-list"></div>
+        <div id="filters">
+            <h3>Rajaa tuloksia:</h3>
+            <label>Hinta: <input type="range" id="priceFilter" min="0" max="1000"></label>
+            <label>Brändi: <input type="text" id="brandFilter"></label>
+            <label>Kategoria: <input type="text" id="categoryFilter"></label>
+            <label>Arvostelut: <input type="number" id="ratingFilter" min="1" max="5"></label>
+            <button id="filterBtn">Rajaa</button>
+        </div>
+
+        <div id="product-list">
+            <!-- Tuotteet latautuvat tänne dynaamisesti -->
+        </div>
+
+        <div id="pagination">
+            <!-- Sivutuksen linkit -->
+        </div>
     </main>
-    <script src="scripts/app.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Kauppa</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

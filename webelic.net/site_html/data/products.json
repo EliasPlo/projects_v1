@@ -1,0 +1,106 @@
+[
+  {
+    "ID": 1,
+    "name": "Tuote 1",
+    "description": "Tuotteen 1 kuvaus",
+    "price": 150.95,
+    "category": "Elektroniikka",
+    "stock": 150,
+    "brand": "ComCam",
+    "rating": 4.5,
+    "reviews": [
+        {
+            "customer": "Asiakas1",
+            "rating": 5,
+            "comment": "Erittäin hyvä tuote!"
+        },
+        {
+            "customer": "Asiakas2",
+            "rating": 4,
+            "comment": "Hyvä, mutta voisi olla halvempi."
+        }
+    ],
+    "date_added": "2024-07-10",
+    "supplier": "Tuonti Oy",
+    "warranty": "2 vuotta",
+    "availability": "Varastossa"
+},
+{
+    "ID": 2,
+    "name": "Tuote 2",
+    "description": "Tuotteen 2 kuvaus",
+    "price": 89.99,
+    "category": "Kodinkoneet",
+    "stock": 75,
+    "brand": "HomeTech",
+    "rating": 4.0,
+    "reviews": [
+        {
+            "customer": "Asiakas3",
+            "rating": 4,
+            "comment": "Helppokäyttöinen."
+        },
+        {
+            "customer": "Asiakas4",
+            "rating": 3,
+            "comment": "Toimii, mutta ei täydellinen."
+        }
+    ],
+    "date_added": "2024-06-20",
+    "supplier": "Kodinkone Oy",
+    "warranty": "1 vuosi",
+    "availability": "Varastossa"
+},
+{
+    "ID": 3,
+    "name": "Tuote 3",
+    "description": "Tuotteen 3 kuvaus",
+    "price": 299.49,
+    "category": "Tietokoneet",
+    "stock": 50,
+    "brand": "TechPro",
+    "rating": 4.8,
+    "reviews": [
+        {
+            "customer": "Asiakas5",
+            "rating": 5,
+            "comment": "Paras tuote, jota olen koskaan käyttänyt."
+        },
+        {
+            "customer": "Asiakas6",
+            "rating": 5,
+            "comment": "Hyvä vastine rahalle."
+        }
+    ],
+    "date_added": "2024-05-15",
+    "supplier": "Tietokone Oy",
+    "warranty": "3 vuotta",
+    "availability": "Rajoitettu erä"
+  },
+  {
+        "ID": 4,
+        "name": "tuote1",
+        "description": "tuotteen1 kuvaus",
+        "price": 150.95,
+        "category": "eletroniikka",
+        "stock": 150,
+        "brand": "ComCam",
+        "rating": 4.5,
+        "reviews": [
+            {
+              "customer": "",
+              "rating": 5,
+              "comment": "!"
+            },
+            {
+              "customer": "",
+              "rating": 4,
+              "comment": ""
+            }
+          ],
+        "date_added": "10-07-2024",
+        "supplier": "Tuonti Oy",
+        "warranty": "2 years",
+        "availability": "instock"
+    }
+]

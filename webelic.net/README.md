@@ -27,9 +27,9 @@ admin kirjautumis tiedot ovat data/admins.json tiedostossa: tänne talnetuu admi
 käyttäjätiedot ovat data/users.json tiedostossa: tänne tallnetuu kaikkien rekisteroityjen käyttäjien tiedot (osto/maksu tapahtumia ei voi tehdä ilman käyttäjää)
 
 tee ostoskori ominaisuus 
-kun tuotteen avaa se avautuu product.html tiedostoon
-tee pagination sivulle
-tee hakutoiminto ja filter ominainuus että voi rajata hinnan, btandin, kategorian, ratingin mukaan 
+kun tuotteen avaa se avautuu product.html tiedostoon ID perusteella
+tee pagination etusivulle (index.html)
+tee hakutoiminto ja filter ominainuus että voi rajata hinnan, brandin, kategorian, ratingin mukaan 
 
 products.json 
 [
@@ -155,3 +155,12 @@ users.json
       }
     ]
   }
+
+DA
+https://chatgpt.com/c/675fdad3-2fc0-8012-9741-bf0387f622e6
+
+lisää toimiva ostoskori joka toimii niin että kun lisää tuotteen se menee shopcart.html
+accounts json tiedostossa on tilit jota voi käyttää maksamiseen 
+ostos korissa voi lisätä maksu tiedot ja kun maksu tiedot lisätään ja ne täsmäävät accounts.json tiedstoon niin ne menevät payments.json tiedostoon ja tallentuvat sinne ja maksu menee läpi 
+
+sen javascript koodi on shopcart.js tiedostossa
