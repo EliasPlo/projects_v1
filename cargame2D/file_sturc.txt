@@ -57,12 +57,13 @@ projektin-juurikansio/
 │   │   │   ├── car_sport_yellow.png       # Urheiluauto, sininen väri.
 │   │   │   ├── car_truck_yellow.png      # Lava-auto, sininen väri.
 │   │   │   ├── car_sedan_yellow.png     # Perhesedan, sininen väri.
-│   │   │   ├── car_race_blue.png      # Kilpa-auto, sininen väri.
+│   │   │   ├── car_race_yellow.png      # Kilpa-auto, sininen väri.
 │   │   │   ├── car_offroad_yellow.png      # 
 │   │   │   ├── car_muscle_yellow.png      # 
 │   │   │   ├── car_electric_yellow.png      # 
 │   │   │   ├── car_convertible_yellow.png      # 
 │   │   │   ├── car_luxury_yellow.png      # 
+
 │   │   │   ├── car_firetruck_red.png      # 
 │   │   │   ├── car_police_blue_white.png      # 
 │   │   │   ├── car_taxi_yellow.png      # 
@@ -76,7 +77,7 @@ projektin-juurikansio/
 │   │   │   ├── car_dragster_red.png      # 
 │   │   │   ├── car_delivery_van_white.png      # 
 │   │   │   ├── car_armored_black.png      # 
-│   │   │   └── car_formula_white.png   # formula auto
+│   │   │   └── car_formula_red.png   # formula auto
 │   │   ├── tracks/               # Ratojen kuvat
 │   │   │   ├── track_city_street.png
 │   │   │   ├── track_sand_dunes.png
