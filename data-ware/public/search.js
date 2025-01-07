@@ -30,7 +30,7 @@ function displayArticles(articlesToDisplay) {
         articleElement.innerHTML = `
             <h2>${article.title}</h2>
             <p>${article.content.slice(0, 100)}...</p>
-            <button onclick="readMore(${article.id})">Read More</button>
+            <a onclick="readMore(${article.id})">Read More</a>
         `;
         articlesContainer.appendChild(articleElement);
     });
@@ -47,7 +47,7 @@ function setupPagination(articlesToPaginate) {
     const pageCount = Math.ceil(articlesToPaginate.length / articlesPerPage);
     
     for (let i = 1; i <= pageCount; i++) {
-        const pageButton = document.createElement("button");
+        const pageButton = document.createElement("a");
         pageButton.textContent = i;
         pageButton.classList.add("page-button");
         pageButton.addEventListener("click", () => {
