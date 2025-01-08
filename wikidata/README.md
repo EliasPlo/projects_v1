@@ -32,7 +32,15 @@ data.json
       },
       "writer": "",
       "creator": "",
-      "published_date": ""
+      "published_date": "",
+      "tags": [
+        {
+
+        },
+        {
+          
+        }
+      ]
     },
     ]
 }
